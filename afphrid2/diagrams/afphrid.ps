@@ -1,0 +1,3987 @@
+%!PS-Adobe-2.0
+%%Creator: neato version 1.7.16 (Wed Feb  6 02:14:53 MST 2002)
+%%For: (aquarion) Nicholas Avenell,,,
+%%Title: test
+%%Pages: (atend)
+%%BoundingBox: 35 35 14338 13737
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+
+EncodingVector
+  dup 306 /AE
+  dup 301 /Aacute
+  dup 302 /Acircumflex
+  dup 304 /Adieresis
+  dup 300 /Agrave
+  dup 305 /Aring
+  dup 303 /Atilde
+  dup 307 /Ccedilla
+  dup 311 /Eacute
+  dup 312 /Ecircumflex
+  dup 313 /Edieresis
+  dup 310 /Egrave
+  dup 315 /Iacute
+  dup 316 /Icircumflex
+  dup 317 /Idieresis
+  dup 314 /Igrave
+  dup 334 /Udieresis
+  dup 335 /Yacute
+  dup 376 /thorn
+  dup 337 /germandbls
+  dup 341 /aacute
+  dup 342 /acircumflex
+  dup 344 /adieresis
+  dup 346 /ae
+  dup 340 /agrave
+  dup 345 /aring
+  dup 347 /ccedilla
+  dup 351 /eacute
+  dup 352 /ecircumflex
+  dup 353 /edieresis
+  dup 350 /egrave
+  dup 355 /iacute
+  dup 356 /icircumflex
+  dup 357 /idieresis
+  dup 354 /igrave
+  dup 360 /dcroat
+  dup 361 /ntilde
+  dup 363 /oacute
+  dup 364 /ocircumflex
+  dup 366 /odieresis
+  dup 362 /ograve
+  dup 365 /otilde
+  dup 370 /oslash
+  dup 372 /uacute
+  dup 373 /ucircumflex
+  dup 374 /udieresis
+  dup 371 /ugrave
+  dup 375 /yacute
+  dup 377 /ydieresis  
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+	dup 1 exch div /InvScaleFactor exch def
+	dup scale
+} bind def
+
+% styles
+/solid { } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw aligned label in bounding box aligned to current point
+/alignedtext {			% width adj text
+	/text exch def
+	/adj exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			text stringwidth pop adj mul 0 rmoveto
+		} if
+		[] 0 setdash
+		text show
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 14338 13737
+%%PageOrientation: Portrait
+gsave
+35 35 14303 13702 boxprim clip newpath
+36 36 translate
+0 0 1 beginpage
+0 0 translate 0 rotate
+[ /CropBox [36 36 14338 13737] /PAGES pdfmark
+0.000 0.000 0.000 graphcolor
+14.00 /Times-Roman set_font
+
+%	node1
+gsave 10 dict begin
+7627 7374 44 18 ellipse_path
+stroke
+gsave 10 dict begin
+7627 7369 moveto 66 -0.5 (Aquarion) alignedtext
+end grestore
+end grestore
+
+%	node4
+gsave 10 dict begin
+7225 7267 64 18 ellipse_path
+stroke
+gsave 10 dict begin
+7225 7262 moveto 107 -0.5 (rachel walmsley) alignedtext
+end grestore
+end grestore
+
+%	node1 -> node4
+newpath 7590 7364 moveto
+7484 7336 7378 7307 7272 7279 curveto
+stroke
+gsave 10 dict begin
+7426 7327 moveto 165 -0.5 (AFPhiance/AFPhiancee) alignedtext
+end grestore
+
+%	node5
+gsave 10 dict begin
+7525 8700 44 18 ellipse_path
+stroke
+gsave 10 dict begin
+7525 8695 moveto 66 -0.5 (sandriana) alignedtext
+end grestore
+end grestore
+
+%	node1 -> node5
+newpath 7626 7392 moveto
+7592 7822 7560 8252 7526 8682 curveto
+stroke
+gsave 10 dict begin
+7600 8032 moveto 273 -0.5 (future sworn enemy/future sworn enemy) alignedtext
+end grestore
+
+%	node21
+gsave 10 dict begin
+6911 6028 35 18 ellipse_path
+stroke
+gsave 10 dict begin
+6911 6023 moveto 48 -0.5 (lonecat) alignedtext
+end grestore
+end grestore
+
+%	node1 -> node21
+newpath 7618 7356 moveto
+7386 6920 7152 6482 6920 6045 curveto
+stroke
+gsave 10 dict begin
+7293 6696 moveto 109 -0.5 (adoptee/adopter) alignedtext
+end grestore
+
+%	node1 -> node21
+newpath 7618 7356 moveto
+7386 6920 7152 6482 6920 6045 curveto
+stroke
+gsave 10 dict begin
+7293 6696 moveto 68 -0.5 (twin/twin) alignedtext
+end grestore
+
+%	node1 -> node21
+newpath 7618 7356 moveto
+7386 6920 7152 6482 6920 6045 curveto
+stroke
+gsave 10 dict begin
+7293 6696 moveto 108 -0.5 (worshipper/god) alignedtext
+end grestore
+
+%	node22
+gsave 10 dict begin
+7706 7225 30 18 ellipse_path
+stroke
+gsave 10 dict begin
+7706 7220 moveto 38 -0.5 (nattie) alignedtext
+end grestore
+end grestore
+
+%	node1 -> node22
+newpath 7636 7356 moveto
+7656 7319 7677 7280 7697 7242 curveto
+stroke
+gsave 10 dict begin
+7690 7294 moveto 160 -0.5 (Afphiance/Afphiancee) alignedtext
+end grestore
+
+%	node1 -> node22
+newpath 7636 7356 moveto
+7656 7319 7677 7280 7697 7242 curveto
+stroke
+gsave 10 dict begin
+7690 7294 moveto 288 -0.5 (Supplemental Sibling/Supplemental Sibling) alignedtext
+end grestore
+
+%	node30
+gsave 10 dict begin
+9433 6412 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+9433 6407 moveto 25 -0.5 (MP) alignedtext
+end grestore
+end grestore
+
+%	node1 -> node30
+newpath 7654 7360 moveto
+8240 7048 8826 6735 9412 6423 curveto
+stroke
+gsave 10 dict begin
+8530 6900 moveto 113 -0.5 (Amazed fan/idol) alignedtext
+end grestore
+
+%	node48
+gsave 10 dict begin
+7638 7732 41 18 ellipse_path
+stroke
+gsave 10 dict begin
+7638 7727 moveto 61 -0.5 (Ssirienna) alignedtext
+end grestore
+end grestore
+
+%	node1 -> node48
+newpath 7627 7392 moveto
+7631 7499 7635 7607 7638 7714 curveto
+stroke
+gsave 10 dict begin
+7656 7548 moveto 145 -0.5 (afpfiancé/afpfiancée) alignedtext
+end grestore
+
+%	node85
+gsave 10 dict begin
+7426 7421 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+7426 7416 moveto 22 -0.5 (Liz) alignedtext
+end grestore
+end grestore
+
+%	node1 -> node85
+newpath 7589 7383 moveto
+7543 7393 7497 7405 7452 7415 curveto
+stroke
+gsave 10 dict begin
+7526 7404 moveto 165 -0.5 (AFPhiance/AFPhiancee) alignedtext
+end grestore
+
+%	node1 -> node85
+newpath 7589 7383 moveto
+7543 7393 7497 7405 7452 7415 curveto
+stroke
+gsave 10 dict begin
+7526 7404 moveto 116 -0.5 (God/Worshipper) alignedtext
+end grestore
+
+%	node102
+gsave 10 dict begin
+7926 7052 61 18 ellipse_path
+stroke
+gsave 10 dict begin
+7926 7047 moveto 100 -0.5 (quantum moth) alignedtext
+end grestore
+end grestore
+
+%	node1 -> node102
+newpath 7643 7357 moveto
+7732 7262 7821 7165 7910 7069 curveto
+stroke
+gsave 10 dict begin
+7800 7208 moveto 126 -0.5 (evil twin/good twin) alignedtext
+end grestore
+
+%	node2
+gsave 10 dict begin
+8480 5737 30 18 ellipse_path
+stroke
+gsave 10 dict begin
+8480 5732 moveto 39 -0.5 (hippo) alignedtext
+end grestore
+end grestore
+
+%	node7
+gsave 10 dict begin
+7365 7567 46 18 ellipse_path
+stroke
+gsave 10 dict begin
+7365 7562 moveto 71 -0.5 (Rosemary) alignedtext
+end grestore
+end grestore
+
+%	node2 -> node7
+newpath 8470 5754 moveto
+8106 6352 7740 6951 7376 7549 curveto
+stroke
+gsave 10 dict begin
+7946 6647 moveto 154 -0.5 (AFPiancee/AFPfiance) alignedtext
+end grestore
+
+%	node8
+gsave 10 dict begin
+7562 7459 48 18 ellipse_path
+stroke
+gsave 10 dict begin
+7562 7454 moveto 74 -0.5 (Carrie Cota) alignedtext
+end grestore
+end grestore
+
+%	node2 -> node8
+newpath 8471 5754 moveto
+8171 6316 7871 6879 7572 7441 curveto
+stroke
+gsave 10 dict begin
+8045 6593 moveto 165 -0.5 (AFPhiance/AFPhiancee) alignedtext
+end grestore
+
+%	node15
+gsave 10 dict begin
+6923 7588 53 18 ellipse_path
+stroke
+gsave 10 dict begin
+6923 7583 moveto 84 -0.5 (Supermouse) alignedtext
+end grestore
+end grestore
+
+%	node2 -> node15
+newpath 8466 5753 moveto
+7957 6359 7447 6964 6938 7571 curveto
+stroke
+gsave 10 dict begin
+7725 6657 moveto 135 -0.5 (Rodent/attic-keeper) alignedtext
+end grestore
+
+%	node35
+gsave 10 dict begin
+7854 7285 42 18 ellipse_path
+stroke
+gsave 10 dict begin
+7854 7280 moveto 63 -0.5 (mmessall) alignedtext
+end grestore
+end grestore
+
+%	node2 -> node35
+newpath 8473 5755 moveto
+8269 6259 8065 6763 7861 7267 curveto
+stroke
+gsave 10 dict begin
+8191 6506 moveto 131 -0.5 (afpiancee/afpiance) alignedtext
+end grestore
+
+%	node40
+gsave 10 dict begin
+7892 7758 31 18 ellipse_path
+stroke
+gsave 10 dict begin
+7892 7753 moveto 40 -0.5 (rruthi) alignedtext
+end grestore
+end grestore
+
+%	node2 -> node40
+newpath 8475 5755 moveto
+8283 6416 8090 7079 7897 7740 curveto
+stroke
+gsave 10 dict begin
+8210 6742 moveto 165 -0.5 (AFPhiance/AFPhiancee) alignedtext
+end grestore
+
+%	node2 -> node40
+newpath 8475 5755 moveto
+8283 6416 8090 7079 7897 7740 curveto
+stroke
+gsave 10 dict begin
+8210 6742 moveto 141 -0.5 (big sister/little brother) alignedtext
+end grestore
+
+%	node50
+gsave 10 dict begin
+7743 7659 43 18 ellipse_path
+stroke
+gsave 10 dict begin
+7743 7654 moveto 64 -0.5 (MartynC) alignedtext
+end grestore
+end grestore
+
+%	node2 -> node50
+newpath 8473 5755 moveto
+8232 6383 7991 7013 7750 7641 curveto
+stroke
+gsave 10 dict begin
+8135 6693 moveto 226 -0.5 (AFPchauffeured/AFPchauffeur) alignedtext
+end grestore
+
+%	node56
+gsave 10 dict begin
+7456 7546 30 18 ellipse_path
+stroke
+gsave 10 dict begin
+7456 7541 moveto 39 -0.5 (Sarah) alignedtext
+end grestore
+end grestore
+
+%	node2 -> node56
+newpath 8470 5754 moveto
+8135 6345 7800 6938 7466 7529 curveto
+stroke
+gsave 10 dict begin
+7992 6636 moveto 161 -0.5 (AFPfiance/AFPfiancee) alignedtext
+end grestore
+
+%	node60
+gsave 10 dict begin
+7371 7321 45 18 ellipse_path
+stroke
+gsave 10 dict begin
+7371 7316 moveto 68 -0.5 (Melodysk) alignedtext
+end grestore
+end grestore
+
+%	node2 -> node60
+newpath 8468 5754 moveto
+8107 6270 7744 6787 7383 7303 curveto
+stroke
+gsave 10 dict begin
+7949 6524 moveto 258 -0.5 (good influenced old fart/good influence) alignedtext
+end grestore
+
+%	node108
+gsave 10 dict begin
+7414 7209 36 18 ellipse_path
+stroke
+gsave 10 dict begin
+7414 7204 moveto 50 -0.5 (Kimmi) alignedtext
+end grestore
+end grestore
+
+%	node2 -> node108
+newpath 8468 5754 moveto
+8121 6232 7773 6714 7426 7192 curveto
+stroke
+gsave 10 dict begin
+7971 6468 moveto 119 -0.5 (afpsink/afpsauce) alignedtext
+end grestore
+
+%	node110
+gsave 10 dict begin
+7129 7518 32 18 ellipse_path
+stroke
+gsave 10 dict begin
+7129 7513 moveto 43 -0.5 (needle) alignedtext
+end grestore
+end grestore
+
+%	node2 -> node110
+newpath 8467 5754 moveto
+8026 6335 7584 6920 7142 7501 curveto
+stroke
+gsave 10 dict begin
+7828 6622 moveto 91 -0.5 (friend/friend) alignedtext
+end grestore
+
+%	node3
+gsave 10 dict begin
+5556 7373 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+5556 7368 moveto 31 -0.5 (amy) alignedtext
+end grestore
+end grestore
+
+%	node3 -> node4
+newpath 5583 7371 moveto
+6109 7338 6636 7304 7162 7271 curveto
+stroke
+gsave 10 dict begin
+6390 7327 moveto 100 -0.5 (AFPsis/AFPsis) alignedtext
+end grestore
+
+%	node3 -> node22
+newpath 5583 7371 moveto
+6280 7324 6979 7274 7676 7227 curveto
+stroke
+gsave 10 dict begin
+6631 7306 moveto 172 -0.5 (AFPsecretary/AFPGuide) alignedtext
+end grestore
+
+%	node3 -> node85
+newpath 5583 7374 moveto
+6188 7389 6794 7405 7399 7420 curveto
+stroke
+gsave 10 dict begin
+6491 7404 moveto 154 -0.5 (AFPiancee/AFPiancee) alignedtext
+end grestore
+
+%	node117
+gsave 10 dict begin
+7562 7169 41 18 ellipse_path
+stroke
+gsave 10 dict begin
+7562 7164 moveto 61 -0.5 (ryo-chan) alignedtext
+end grestore
+end grestore
+
+%	node3 -> node117
+newpath 5583 7370 moveto
+6229 7304 6876 7239 7522 7173 curveto
+stroke
+gsave 10 dict begin
+6559 7278 moveto 152 -0.5 (#AFPsister/#Afpsister) alignedtext
+end grestore
+
+%	node124
+gsave 10 dict begin
+7106 7850 31 18 ellipse_path
+stroke
+gsave 10 dict begin
+7106 7845 moveto 41 -0.5 (sanity) alignedtext
+end grestore
+end grestore
+
+%	node3 -> node124
+newpath 5581 7381 moveto
+6079 7534 6580 7688 7078 7842 curveto
+stroke
+gsave 10 dict begin
+6331 7618 moveto 138 -0.5 (afpbrother/afpsister) alignedtext
+end grestore
+
+%	node131
+gsave 10 dict begin
+6792 7848 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+6792 7843 moveto 21 -0.5 (lisa) alignedtext
+end grestore
+end grestore
+
+%	node3 -> node131
+newpath 5580 7382 moveto
+5976 7534 6372 7687 6768 7839 curveto
+stroke
+gsave 10 dict begin
+6174 7617 moveto 155 -0.5 (#afpiancee/#afpiancee) alignedtext
+end grestore
+
+%	node136
+gsave 10 dict begin
+6693 7387 31 18 ellipse_path
+stroke
+gsave 10 dict begin
+6693 7382 moveto 40 -0.5 (hikari) alignedtext
+end grestore
+end grestore
+
+%	node3 -> node136
+newpath 5583 7373 moveto
+5943 7377 6302 7383 6662 7387 curveto
+stroke
+gsave 10 dict begin
+6124 7387 moveto 252 -0.5 (bunad fitter/torturer with blunt objects) alignedtext
+end grestore
+
+%	node147
+gsave 10 dict begin
+7531 6643 45 18 ellipse_path
+stroke
+gsave 10 dict begin
+7531 6638 moveto 68 -0.5 (peterneko) alignedtext
+end grestore
+end grestore
+
+%	node3 -> node147
+newpath 5580 7364 moveto
+6219 7128 6859 6891 7498 6655 curveto
+stroke
+gsave 10 dict begin
+6543 7015 moveto 194 -0.5 (99% similarity/99% similarity) alignedtext
+end grestore
+
+%	node166
+gsave 10 dict begin
+7014 7305 42 18 ellipse_path
+stroke
+gsave 10 dict begin
+7014 7300 moveto 62 -0.5 (Star_Fey) alignedtext
+end grestore
+end grestore
+
+%	node3 -> node166
+newpath 5583 7372 moveto
+6046 7351 6509 7328 6972 7307 curveto
+stroke
+gsave 10 dict begin
+6285 7346 moveto 154 -0.5 (LittleOne/AFPadoptor) alignedtext
+end grestore
+
+%	node10
+gsave 10 dict begin
+7064 8108 46 18 ellipse_path
+stroke
+gsave 10 dict begin
+7064 8103 moveto 70 -0.5 (Bluebottle) alignedtext
+end grestore
+end grestore
+
+%	node4 -> node10
+newpath 7222 7285 moveto
+7171 7553 7118 7822 7067 8090 curveto
+stroke
+gsave 10 dict begin
+7168 7682 moveto 161 -0.5 (afpmistress/afpmistress) alignedtext
+end grestore
+
+%	node13
+gsave 10 dict begin
+7296 7509 49 18 ellipse_path
+stroke
+gsave 10 dict begin
+7296 7504 moveto 77 -0.5 (Rhys Smith) alignedtext
+end grestore
+end grestore
+
+%	node4 -> node13
+newpath 7230 7285 moveto
+7250 7353 7271 7423 7291 7491 curveto
+stroke
+gsave 10 dict begin
+7284 7383 moveto 182 -0.5 (AFPsheep/AFPWelshman) alignedtext
+end grestore
+
+%	node19
+gsave 10 dict begin
+7332 7413 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+7332 7408 moveto 33 -0.5 (ratty) alignedtext
+end grestore
+end grestore
+
+%	node4 -> node19
+newpath 7238 7285 moveto
+7265 7322 7293 7360 7320 7397 curveto
+stroke
+gsave 10 dict begin
+7302 7335 moveto 154 -0.5 (AFPiancee/AFPiancee) alignedtext
+end grestore
+
+%	node4 -> node21
+newpath 7220 7249 moveto
+7119 6848 7016 6447 6915 6046 curveto
+stroke
+gsave 10 dict begin
+7092 6642 moveto 68 -0.5 (twin/twin) alignedtext
+end grestore
+
+%	node4 -> node22
+newpath 7286 7262 moveto
+7416 7250 7546 7239 7676 7228 curveto
+stroke
+gsave 10 dict begin
+7465 7253 moveto 184 -0.5 (Mentress/Trainee Soubrette) alignedtext
+end grestore
+
+%	node4 -> node22
+newpath 7286 7262 moveto
+7416 7250 7546 7239 7676 7228 curveto
+stroke
+gsave 10 dict begin
+7465 7253 moveto 106 -0.5 (agneau/bergere) alignedtext
+end grestore
+
+%	node25
+gsave 10 dict begin
+7570 7647 37 18 ellipse_path
+stroke
+gsave 10 dict begin
+7570 7642 moveto 52 -0.5 (Andrea) alignedtext
+end grestore
+end grestore
+
+%	node4 -> node25
+newpath 7241 7285 moveto
+7346 7399 7450 7516 7555 7630 curveto
+stroke
+gsave 10 dict begin
+7421 7452 moveto 134 -0.5 (AFPbrat/AFPmum) alignedtext
+end grestore
+
+%	node4 -> node60
+newpath 7264 7281 moveto
+7289 7291 7314 7300 7338 7309 curveto
+stroke
+gsave 10 dict begin
+7298 7301 moveto 96 -0.5 (Jesse/Meowth) alignedtext
+end grestore
+
+%	node71
+gsave 10 dict begin
+7133 6576 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+7133 6571 moveto 19 -0.5 (cat) alignedtext
+end grestore
+end grestore
+
+%	node4 -> node71
+newpath 7223 7249 moveto
+7194 7031 7164 6812 7135 6594 curveto
+stroke
+gsave 10 dict begin
+7203 6916 moveto 158 -0.5 (AFPhiance/AFPhiance) alignedtext
+end grestore
+
+%	node82
+gsave 10 dict begin
+7401 7494 29 18 ellipse_path
+stroke
+gsave 10 dict begin
+7401 7489 moveto 37 -0.5 (Trina) alignedtext
+end grestore
+end grestore
+
+%	node4 -> node82
+newpath 7239 7285 moveto
+7288 7348 7339 7414 7388 7477 curveto
+stroke
+gsave 10 dict begin
+7337 7375 moveto 138 -0.5 (afpiancée/afpiancée) alignedtext
+end grestore
+
+%	node4 -> node85
+newpath 7247 7284 moveto
+7301 7325 7354 7367 7408 7408 curveto
+stroke
+gsave 10 dict begin
+7325 7351 moveto 139 -0.5 (AFPiance/AFPiance) alignedtext
+end grestore
+
+%	node4 -> node102
+newpath 7269 7254 moveto
+7473 7191 7679 7128 7883 7065 curveto
+stroke
+gsave 10 dict begin
+7575 7166 moveto 102 -0.5 (james/meowth) alignedtext
+end grestore
+
+%	node4 -> node108
+newpath 7269 7254 moveto
+7307 7242 7345 7230 7383 7219 curveto
+stroke
+gsave 10 dict begin
+7319 7245 moveto 194 -0.5 (afpcorruptress/afpcorruptee) alignedtext
+end grestore
+
+%	node116
+gsave 10 dict begin
+7401 6965 53 18 ellipse_path
+stroke
+gsave 10 dict begin
+7401 6960 moveto 84 -0.5 (JamesGreen) alignedtext
+end grestore
+end grestore
+
+%	node4 -> node116
+newpath 7235 7249 moveto
+7287 7161 7339 7071 7391 6983 curveto
+stroke
+gsave 10 dict begin
+7337 7111 moveto 438 -0.5 (zombie brain-share coparticipant/zombie brain-share coparticipant) alignedtext
+end grestore
+
+%	node61
+gsave 10 dict begin
+7406 7772 35 18 ellipse_path
+stroke
+gsave 10 dict begin
+7406 7767 moveto 48 -0.5 (Martin) alignedtext
+end grestore
+end grestore
+
+%	node5 -> node61
+newpath 7523 8682 moveto
+7485 8385 7446 8087 7408 7790 curveto
+stroke
+gsave 10 dict begin
+7489 8231 moveto 89 -0.5 (squid/cloggie) alignedtext
+end grestore
+
+%	node5 -> node61
+newpath 7523 8682 moveto
+7485 8385 7446 8087 7408 7790 curveto
+stroke
+gsave 10 dict begin
+7489 8231 moveto 89 -0.5 (cloggie/squid) alignedtext
+end grestore
+
+%	node63
+gsave 10 dict begin
+7908 7584 56 18 ellipse_path
+stroke
+gsave 10 dict begin
+7908 7579 moveto 91 -0.5 (dragonprince) alignedtext
+end grestore
+end grestore
+
+%	node5 -> node63
+newpath 7531 8682 moveto
+7654 8322 7779 7962 7902 7602 curveto
+stroke
+gsave 10 dict begin
+7740 8137 moveto 153 -0.5 (afpfiancee/afpfiancee) alignedtext
+end grestore
+
+%	node6
+gsave 10 dict begin
+6277 5398 34 18 ellipse_path
+stroke
+gsave 10 dict begin
+6277 5393 moveto 46 -0.5 (Davon) alignedtext
+end grestore
+end grestore
+
+%	node6 -> node7
+newpath 6286 5415 moveto
+6642 6127 7000 6838 7356 7549 curveto
+stroke
+gsave 10 dict begin
+6845 6477 moveto 123 -0.5 (afpiance/afpiance) alignedtext
+end grestore
+
+%	node6 -> node8
+newpath 6288 5415 moveto
+6708 6090 7131 6766 7551 7441 curveto
+stroke
+gsave 10 dict begin
+6943 6423 moveto 154 -0.5 (AFPbrother/AFPsister) alignedtext
+end grestore
+
+%	node6 -> node40
+newpath 6289 5415 moveto
+6819 6189 7350 6967 7880 7741 curveto
+stroke
+gsave 10 dict begin
+7108 6573 moveto 149 -0.5 (afphiancee/afphiance) alignedtext
+end grestore
+
+%	node68
+gsave 10 dict begin
+7644 7487 65 18 ellipse_path
+stroke
+gsave 10 dict begin
+7644 7482 moveto 109 -0.5 (oliver_newman) alignedtext
+end grestore
+end grestore
+
+%	node6 -> node68
+newpath 6288 5415 moveto
+6735 6099 7185 6785 7632 7469 curveto
+stroke
+gsave 10 dict begin
+6984 6437 moveto 106 -0.5 (afpbug/afpbug) alignedtext
+end grestore
+
+%	node6 -> node71
+newpath 6289 5415 moveto
+6566 5796 6844 6179 7121 6560 curveto
+stroke
+gsave 10 dict begin
+6729 5982 moveto 138 -0.5 (afpbrother/afpsister) alignedtext
+end grestore
+
+%	node6 -> node108
+newpath 6288 5415 moveto
+6659 6007 7032 6600 7403 7192 curveto
+stroke
+gsave 10 dict begin
+6869 6298 moveto 204 -0.5 (AFPworshipper/AFPGoddess) alignedtext
+end grestore
+
+%	node6 -> node108
+newpath 6288 5415 moveto
+6659 6007 7032 6600 7403 7192 curveto
+stroke
+gsave 10 dict begin
+6869 6298 moveto 172 -0.5 (AFPhiancee/AFPhiancee) alignedtext
+end grestore
+
+%	node122
+gsave 10 dict begin
+6861 6966 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+6861 6961 moveto 30 -0.5 (Sam) alignedtext
+end grestore
+end grestore
+
+%	node6 -> node122
+newpath 6284 5416 moveto
+6473 5926 6665 6438 6854 6948 curveto
+stroke
+gsave 10 dict begin
+6593 6177 moveto 108 -0.5 (AFPbro/AFPsis) alignedtext
+end grestore
+
+%	node6 -> node166
+newpath 6284 5416 moveto
+6525 6039 6766 6664 7007 7287 curveto
+stroke
+gsave 10 dict begin
+6669 6346 moveto 144 -0.5 (Worshipper/Goddess) alignedtext
+end grestore
+
+%	node9
+gsave 10 dict begin
+7274 7750 28 18 ellipse_path
+stroke
+gsave 10 dict begin
+7274 7745 moveto 34 -0.5 (mike) alignedtext
+end grestore
+end grestore
+
+%	node7 -> node9
+newpath 7356 7585 moveto
+7332 7634 7307 7683 7283 7733 curveto
+stroke
+gsave 10 dict begin
+7343 7653 moveto 131 -0.5 (afpiancee/afpiance) alignedtext
+end grestore
+
+%	node7 -> node22
+newpath 7382 7550 moveto
+7484 7447 7588 7343 7691 7241 curveto
+stroke
+gsave 10 dict begin
+7559 7391 moveto 138 -0.5 (afpiancee/afpiancee) alignedtext
+end grestore
+
+%	node7 -> node61
+newpath 7368 7585 moveto
+7380 7641 7391 7698 7402 7754 curveto
+stroke
+gsave 10 dict begin
+7409 7664 moveto 145 -0.5 (afpfiance/afpfiancee) alignedtext
+end grestore
+
+%	node7 -> node85
+newpath 7372 7549 moveto
+7388 7513 7403 7475 7419 7438 curveto
+stroke
+gsave 10 dict begin
+7419 7489 moveto 154 -0.5 (AFPiancee/AFPiancee) alignedtext
+end grestore
+
+%	node87
+gsave 10 dict begin
+7768 7832 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+7768 7827 moveto 33 -0.5 (mole) alignedtext
+end grestore
+end grestore
+
+%	node7 -> node87
+newpath 7389 7582 moveto
+7508 7661 7629 7740 7748 7819 curveto
+stroke
+gsave 10 dict begin
+7566 7706 moveto 149 -0.5 (afphiance/afphiancee) alignedtext
+end grestore
+
+%	node8 -> node10
+newpath 7549 7476 moveto
+7392 7681 7235 7886 7078 8090 curveto
+stroke
+gsave 10 dict begin
+7337 7778 moveto 170 -0.5 (#afpfiancée/#afpfiancée) alignedtext
+end grestore
+
+%	node8 -> node30
+newpath 7589 7444 moveto
+8196 7104 8805 6764 9412 6424 curveto
+stroke
+gsave 10 dict begin
+8497 6942 moveto 138 -0.5 (afpfiance/afpfiance) alignedtext
+end grestore
+
+%	node8 -> node60
+newpath 7540 7443 moveto
+7491 7407 7442 7372 7393 7337 curveto
+stroke
+gsave 10 dict begin
+7466 7397 moveto 207 -0.5 (Evil Twin Sister/Evil Twin Sister) alignedtext
+end grestore
+
+%	node8 -> node63
+newpath 7597 7471 moveto
+7688 7504 7780 7538 7871 7571 curveto
+stroke
+gsave 10 dict begin
+7735 7528 moveto 153 -0.5 (afpfiancee/afpfiancee) alignedtext
+end grestore
+
+%	node8 -> node63
+newpath 7597 7471 moveto
+7688 7504 7780 7538 7871 7571 curveto
+stroke
+gsave 10 dict begin
+7735 7528 moveto 154 -0.5 (AFPfiance/AFPfiance) alignedtext
+end grestore
+
+%	node8 -> node71
+newpath 7553 7441 moveto
+7416 7159 7279 6876 7141 6593 curveto
+stroke
+gsave 10 dict begin
+7371 7012 moveto 161 -0.5 (AFPmum/afpdaughter) alignedtext
+end grestore
+
+%	node9 -> node13
+newpath 7276 7732 moveto
+7282 7664 7289 7595 7294 7527 curveto
+stroke
+gsave 10 dict begin
+7309 7624 moveto 176 -0.5 (AFPnemesis/AFPnemesis) alignedtext
+end grestore
+
+%	node18
+gsave 10 dict begin
+7429 7604 43 18 ellipse_path
+stroke
+gsave 10 dict begin
+7429 7599 moveto 65 -0.5 (Thomas P) alignedtext
+end grestore
+end grestore
+
+%	node9 -> node18
+newpath 7290 7735 moveto
+7330 7697 7371 7658 7411 7620 curveto
+stroke
+gsave 10 dict begin
+7351 7684 moveto 198 -0.5 (not-boyfriend/not-boyfriend) alignedtext
+end grestore
+
+%	node9 -> node19
+newpath 7277 7732 moveto
+7294 7632 7312 7531 7329 7431 curveto
+stroke
+gsave 10 dict begin
+7327 7576 moveto 146 -0.5 (AFPiance/AFPiancee) alignedtext
+end grestore
+
+%	node20
+gsave 10 dict begin
+7193 7045 38 18 ellipse_path
+stroke
+gsave 10 dict begin
+7193 7040 moveto 55 -0.5 (Corinne) alignedtext
+end grestore
+end grestore
+
+%	node9 -> node20
+newpath 7272 7732 moveto
+7247 7509 7220 7286 7195 7063 curveto
+stroke
+gsave 10 dict begin
+7257 7392 moveto 376 -0.5 (High Priest of Procrastination/Goddess Of Procrastination) alignedtext
+end grestore
+
+%	node9 -> node20
+newpath 7272 7732 moveto
+7247 7509 7220 7286 7195 7063 curveto
+stroke
+gsave 10 dict begin
+7257 7392 moveto 146 -0.5 (APFiance/AFPiancee) alignedtext
+end grestore
+
+%	node9 -> node25
+newpath 7299 7741 moveto
+7379 7713 7460 7685 7540 7657 curveto
+stroke
+gsave 10 dict begin
+7422 7705 moveto 175 -0.5 (AFPiance/first AFPiancee) alignedtext
+end grestore
+
+%	node9 -> node56
+newpath 7288 7734 moveto
+7339 7676 7391 7620 7442 7562 curveto
+stroke
+gsave 10 dict begin
+7389 7643 moveto 78 -0.5 (bigsis/lilbro) alignedtext
+end grestore
+
+%	node9 -> node56
+newpath 7288 7734 moveto
+7339 7676 7391 7620 7442 7562 curveto
+stroke
+gsave 10 dict begin
+7389 7643 moveto 141 -0.5 (Afpiancee/Afpiance) alignedtext
+end grestore
+
+%	node9 -> node85
+newpath 7282 7732 moveto
+7327 7635 7373 7536 7418 7439 curveto
+stroke
+gsave 10 dict begin
+7374 7580 moveto 139 -0.5 (AFPiance/AFPiance) alignedtext
+end grestore
+
+%	node9 -> node102
+newpath 7289 7734 moveto
+7496 7513 7703 7291 7910 7070 curveto
+stroke
+gsave 10 dict begin
+7624 7396 moveto 94 -0.5 (calvin/hobbes) alignedtext
+end grestore
+
+%	node109
+gsave 10 dict begin
+7648 7593 39 18 ellipse_path
+stroke
+gsave 10 dict begin
+7648 7588 moveto 57 -0.5 (Eponine) alignedtext
+end grestore
+end grestore
+
+%	node9 -> node109
+newpath 7298 7740 moveto
+7404 7695 7512 7650 7619 7605 curveto
+stroke
+gsave 10 dict begin
+7461 7678 moveto 145 -0.5 (afpfiancee/afpfiance) alignedtext
+end grestore
+
+%	node137
+gsave 10 dict begin
+7538 7322 29 18 ellipse_path
+stroke
+gsave 10 dict begin
+7538 7317 moveto 37 -0.5 (Tiggs) alignedtext
+end grestore
+end grestore
+
+%	node9 -> node137
+newpath 7285 7733 moveto
+7365 7602 7447 7470 7527 7339 curveto
+stroke
+gsave 10 dict begin
+7430 7531 moveto 117 -0.5 (AFPsis/AFpbruv) alignedtext
+end grestore
+
+%	node11
+gsave 10 dict begin
+7877 7456 28 18 ellipse_path
+stroke
+gsave 10 dict begin
+7877 7451 moveto 35 -0.5 (Peter) alignedtext
+end grestore
+end grestore
+
+%	node10 -> node11
+newpath 7084 8092 moveto
+7342 7885 7601 7678 7859 7470 curveto
+stroke
+gsave 10 dict begin
+7470 7789 moveto 143 -0.5 (RL fiancée/RL fiancé) alignedtext
+end grestore
+
+%	node10 -> node11
+newpath 7084 8092 moveto
+7342 7885 7601 7678 7859 7470 curveto
+stroke
+gsave 10 dict begin
+7470 7789 moveto 450 -0.5 (boss/bitch, oh yes he is, now please put that dow... *aaaaaaaaaaaaaaargh*) alignedtext
+end grestore
+
+%	node10 -> node11
+newpath 7084 8092 moveto
+7342 7885 7601 7678 7859 7470 curveto
+stroke
+gsave 10 dict begin
+7470 7789 moveto 145 -0.5 (afpfiancée/afpfiancé) alignedtext
+end grestore
+
+%	node36
+gsave 10 dict begin
+6494 6497 56 18 ellipse_path
+stroke
+gsave 10 dict begin
+6494 6492 moveto 91 -0.5 (Olivia Harries) alignedtext
+end grestore
+end grestore
+
+%	node10 -> node36
+newpath 7058 8090 moveto
+6872 7565 6686 7040 6500 6515 curveto
+stroke
+gsave 10 dict begin
+6803 7297 moveto 153 -0.5 (afpfiancée/afpfiancée) alignedtext
+end grestore
+
+%	node39
+gsave 10 dict begin
+5300 9437 53 18 ellipse_path
+stroke
+gsave 10 dict begin
+5300 9432 moveto 84 -0.5 (SusanCallan) alignedtext
+end grestore
+end grestore
+
+%	node10 -> node39
+newpath 7042 8124 moveto
+6469 8556 5896 8988 5322 9420 curveto
+stroke
+gsave 10 dict begin
+6182 8779 moveto 139 -0.5 (seamstress/Mrs Palm) alignedtext
+end grestore
+
+%	node10 -> node61
+newpath 7081 8091 moveto
+7184 7990 7287 7889 7390 7788 curveto
+stroke
+gsave 10 dict begin
+7235 7947 moveto 145 -0.5 (afpfiance/afpfiancee) alignedtext
+end grestore
+
+%	node10 -> node63
+newpath 7089 8093 moveto
+7353 7929 7618 7764 7882 7600 curveto
+stroke
+gsave 10 dict begin
+7486 7853 moveto 92 -0.5 (afpsis/afpbro) alignedtext
+end grestore
+
+%	node103
+gsave 10 dict begin
+6290 7743 35 18 ellipse_path
+stroke
+gsave 10 dict begin
+6290 7738 moveto 48 -0.5 (tenticle) alignedtext
+end grestore
+end grestore
+
+%	node10 -> node103
+newpath 7035 8094 moveto
+6795 7982 6555 7867 6316 7755 curveto
+stroke
+gsave 10 dict begin
+6677 7932 moveto 241 -0.5 (#AFPdopted son/#AFPdopted mum) alignedtext
+end grestore
+
+%	node14
+gsave 10 dict begin
+7506 7602 30 18 ellipse_path
+stroke
+gsave 10 dict begin
+7506 7597 moveto 38 -0.5 (Ali W) alignedtext
+end grestore
+end grestore
+
+%	node11 -> node14
+newpath 7853 7465 moveto
+7746 7508 7638 7550 7531 7592 curveto
+stroke
+gsave 10 dict begin
+7691 7536 moveto 163 -0.5 (#afpfiancé/#afpfiancée) alignedtext
+end grestore
+
+%	node16
+gsave 10 dict begin
+7121 7680 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+7121 7675 moveto 24 -0.5 (Joy) alignedtext
+end grestore
+end grestore
+
+%	node11 -> node16
+newpath 7852 7463 moveto
+7616 7533 7382 7603 7146 7673 curveto
+stroke
+gsave 10 dict begin
+7499 7575 moveto 145 -0.5 (afpfiancé/afpfiancée) alignedtext
+end grestore
+
+%	node11 -> node16
+newpath 7852 7463 moveto
+7616 7533 7382 7603 7146 7673 curveto
+stroke
+gsave 10 dict begin
+7499 7575 moveto 254 -0.5 (afpkickerinnateef/afpkickeeinnateef) alignedtext
+end grestore
+
+%	node11 -> node16
+newpath 7852 7463 moveto
+7616 7533 7382 7603 7146 7673 curveto
+stroke
+gsave 10 dict begin
+7499 7575 moveto 157 -0.5 (afpdaughter/afpfather) alignedtext
+end grestore
+
+%	node11 -> node35
+newpath 7875 7438 moveto
+7869 7393 7862 7348 7856 7303 curveto
+stroke
+gsave 10 dict begin
+7889 7365 moveto 145 -0.5 (afpfiancé/afpfiancée) alignedtext
+end grestore
+
+%	node11 -> node61
+newpath 7857 7469 moveto
+7714 7565 7570 7661 7428 7758 curveto
+stroke
+gsave 10 dict begin
+7641 7621 moveto 138 -0.5 (afpfiancé/afpfiancé) alignedtext
+end grestore
+
+%	node11 -> node63
+newpath 7881 7474 moveto
+7888 7504 7896 7535 7903 7566 curveto
+stroke
+gsave 10 dict begin
+7916 7515 moveto 130 -0.5 (afpfance/afpfance) alignedtext
+end grestore
+
+%	node75
+gsave 10 dict begin
+8412 7908 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+8412 7903 moveto 29 -0.5 (Suzi) alignedtext
+end grestore
+end grestore
+
+%	node11 -> node75
+newpath 7894 7471 moveto
+8061 7611 8229 7753 8395 7894 curveto
+stroke
+gsave 10 dict begin
+8144 7689 moveto 113 -0.5 (alter ego/alter ego) alignedtext
+end grestore
+
+%	node11 -> node87
+newpath 7872 7474 moveto
+7839 7587 7805 7701 7773 7814 curveto
+stroke
+gsave 10 dict begin
+7846 7639 moveto 142 -0.5 (afphiance/afphiance) alignedtext
+end grestore
+
+%	node11 -> node102
+newpath 7879 7438 moveto
+7894 7316 7910 7192 7924 7070 curveto
+stroke
+gsave 10 dict begin
+7925 7249 moveto 123 -0.5 (afpiance/afpiance) alignedtext
+end grestore
+
+%	node12
+gsave 10 dict begin
+8110 7679 37 18 ellipse_path
+stroke
+gsave 10 dict begin
+8110 7674 moveto 53 -0.5 (BarryR) alignedtext
+end grestore
+end grestore
+
+%	node127
+gsave 10 dict begin
+8997 8324 35 18 ellipse_path
+stroke
+gsave 10 dict begin
+8997 8319 moveto 48 -0.5 (tamara) alignedtext
+end grestore
+end grestore
+
+%	node12 -> node127
+newpath 8131 7694 moveto
+8412 7899 8695 8104 8977 8309 curveto
+stroke
+gsave 10 dict begin
+8553 8008 moveto 232 -0.5 (AFPTwin Sister/AFPTwin Brother) alignedtext
+end grestore
+
+%	node13 -> node19
+newpath 7303 7491 moveto
+7311 7471 7318 7451 7325 7431 curveto
+stroke
+gsave 10 dict begin
+7338 7456 moveto 118 -0.5 (AFPbruv/AFPsis) alignedtext
+end grestore
+
+%	node13 -> node19
+newpath 7303 7491 moveto
+7311 7471 7318 7451 7325 7431 curveto
+stroke
+gsave 10 dict begin
+7338 7456 moveto 154 -0.5 (AFPiancee/AFPiancee) alignedtext
+end grestore
+
+%	node13 -> node56
+newpath 7338 7519 moveto
+7368 7526 7398 7533 7428 7540 curveto
+stroke
+gsave 10 dict begin
+7376 7534 moveto 141 -0.5 (Afpiancee/Afpiance) alignedtext
+end grestore
+
+%	node13 -> node56
+newpath 7338 7519 moveto
+7368 7526 7398 7533 7428 7540 curveto
+stroke
+gsave 10 dict begin
+7376 7534 moveto 212 -0.5 (AFPshepherd/AFPshepherdess) alignedtext
+end grestore
+
+%	node13 -> node56
+newpath 7338 7519 moveto
+7368 7526 7398 7533 7428 7540 curveto
+stroke
+gsave 10 dict begin
+7376 7534 moveto 155 -0.5 (AFPfriend/AFPfriend) alignedtext
+end grestore
+
+%	node13 -> node60
+newpath 7303 7491 moveto
+7324 7441 7343 7389 7364 7339 curveto
+stroke
+gsave 10 dict begin
+7357 7410 moveto 245 -0.5 (AFPYoungMan/AFPOlderWoman) alignedtext
+end grestore
+
+%	node13 -> node108
+newpath 7303 7491 moveto
+7338 7403 7372 7315 7407 7227 curveto
+stroke
+gsave 10 dict begin
+7379 7354 moveto 99 -0.5 (afpMe/afpMe) alignedtext
+end grestore
+
+%	node15 -> node40
+newpath 6970 7596 moveto
+7268 7648 7565 7701 7862 7753 curveto
+stroke
+gsave 10 dict begin
+7407 7680 moveto 138 -0.5 (afpiancee/afpiancee) alignedtext
+end grestore
+
+%	node15 -> node85
+newpath 6961 7575 moveto
+7108 7527 7256 7477 7402 7429 curveto
+stroke
+gsave 10 dict begin
+7174 7511 moveto 154 -0.5 (AFPiancee/AFPiancee) alignedtext
+end grestore
+
+%	node15 -> node110
+newpath 6961 7575 moveto
+7008 7559 7055 7543 7101 7527 curveto
+stroke
+gsave 10 dict begin
+7026 7560 moveto 256 -0.5 (person she met once/person she met once) alignedtext
+end grestore
+
+%	node32
+gsave 10 dict begin
+5782 6375 44 18 ellipse_path
+stroke
+gsave 10 dict begin
+5782 6370 moveto 66 -0.5 (Homicide) alignedtext
+end grestore
+end grestore
+
+%	node16 -> node32
+newpath 7106 7665 moveto
+6671 7241 6234 6816 5799 6392 curveto
+stroke
+gsave 10 dict begin
+6451 7034 moveto 158 -0.5 (AFPBrother/AFPSister) alignedtext
+end grestore
+
+%	node16 -> node60
+newpath 7132 7664 moveto
+7208 7556 7284 7447 7359 7338 curveto
+stroke
+gsave 10 dict begin
+7270 7495 moveto 361 -0.5 (afpon the same wavelength/afpon the same wavelength) alignedtext
+end grestore
+
+%	node17
+gsave 10 dict begin
+11763 13263 34 18 ellipse_path
+stroke
+gsave 10 dict begin
+11763 13258 moveto 46 -0.5 (ccooke) alignedtext
+end grestore
+end grestore
+
+%	node18 -> node60
+newpath 7425 7586 moveto
+7408 7504 7391 7421 7375 7339 curveto
+stroke
+gsave 10 dict begin
+7424 7457 moveto 176 -0.5 (Willing Victim/AFPvamp) alignedtext
+end grestore
+
+%	node19 -> node25
+newpath 7347 7428 moveto
+7416 7496 7485 7563 7554 7631 curveto
+stroke
+gsave 10 dict begin
+7451 7537 moveto 83 -0.5 (mom/bratty) alignedtext
+end grestore
+
+%	node19 -> node63
+newpath 7357 7420 moveto
+7527 7471 7697 7521 7867 7572 curveto
+stroke
+gsave 10 dict begin
+7620 7505 moveto 123 -0.5 (afpiance/afpiance) alignedtext
+end grestore
+
+%	node19 -> node85
+newpath 7359 7415 moveto
+7372 7416 7386 7418 7399 7419 curveto
+stroke
+gsave 10 dict begin
+7379 7424 moveto 156 -0.5 (AFPbig sis/AFPikkle sis) alignedtext
+end grestore
+
+%	node19 -> node85
+newpath 7359 7415 moveto
+7372 7416 7386 7418 7399 7419 curveto
+stroke
+gsave 10 dict begin
+7379 7424 moveto 139 -0.5 (AFPiance/AFPiance) alignedtext
+end grestore
+
+%	node144
+gsave 10 dict begin
+7679 6966 61 18 ellipse_path
+stroke
+gsave 10 dict begin
+7679 6961 moveto 101 -0.5 (GrumbleDook) alignedtext
+end grestore
+end grestore
+
+%	node19 -> node144
+newpath 7344 7397 moveto
+7450 7259 7559 7122 7665 6984 curveto
+stroke
+gsave 10 dict begin
+7529 7184 moveto 120 -0.5 (AFPBruv/AFPsis) alignedtext
+end grestore
+
+%	node34
+gsave 10 dict begin
+8379 7426 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+8379 7421 moveto 24 -0.5 (eric) alignedtext
+end grestore
+end grestore
+
+%	node20 -> node34
+newpath 7225 7055 moveto
+7601 7176 7979 7297 8355 7418 curveto
+stroke
+gsave 10 dict begin
+7786 7242 moveto 150 -0.5 (afpnephew/afpauntie) alignedtext
+end grestore
+
+%	node20 -> node61
+newpath 7198 7063 moveto
+7266 7293 7333 7524 7401 7754 curveto
+stroke
+gsave 10 dict begin
+7323 7403 moveto 131 -0.5 (afpiancee/afpiance) alignedtext
+end grestore
+
+%	node20 -> node85
+newpath 7204 7063 moveto
+7274 7176 7346 7291 7416 7404 curveto
+stroke
+gsave 10 dict begin
+7333 7228 moveto 139 -0.5 (AFPiance/AFPiance) alignedtext
+end grestore
+
+%	node20 -> node102
+newpath 7231 7045 moveto
+7442 7047 7654 7049 7865 7051 curveto
+stroke
+gsave 10 dict begin
+7559 7055 moveto 131 -0.5 (afpiance/afpiancee) alignedtext
+end grestore
+
+%	node125
+gsave 10 dict begin
+7261 7610 56 18 ellipse_path
+stroke
+gsave 10 dict begin
+7261 7605 moveto 90 -0.5 (Guitar_Huw) alignedtext
+end grestore
+end grestore
+
+%	node20 -> node125
+newpath 7195 7063 moveto
+7216 7239 7238 7416 7259 7592 curveto
+stroke
+gsave 10 dict begin
+7251 7322 moveto 165 -0.5 (AFPhiance/AFPhiancee) alignedtext
+end grestore
+
+%	node21 -> node60
+newpath 6917 6046 moveto
+7066 6465 7216 6884 7365 7303 curveto
+stroke
+gsave 10 dict begin
+7165 6669 moveto 168 -0.5 (Afpadopter/Afpadoptee) alignedtext
+end grestore
+
+%	node21 -> node63
+newpath 6922 6045 moveto
+7246 6552 7572 7060 7896 7566 curveto
+stroke
+gsave 10 dict begin
+7433 6801 moveto 145 -0.5 (afpfiancee/afpfiance) alignedtext
+end grestore
+
+%	node21 -> node108
+newpath 6919 6046 moveto
+7080 6427 7245 6810 7406 7191 curveto
+stroke
+gsave 10 dict begin
+7186 6613 moveto 132 -0.5 (Afpsister/Afpsister) alignedtext
+end grestore
+
+%	node21 -> node116
+newpath 6920 6046 moveto
+7077 6346 7235 6647 7392 6947 curveto
+stroke
+gsave 10 dict begin
+7180 6491 moveto 155 -0.5 (AFPfriend/AFPfriend) alignedtext
+end grestore
+
+%	node142
+gsave 10 dict begin
+7746 7531 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+7746 7526 moveto 26 -0.5 (FiX) alignedtext
+end grestore
+end grestore
+
+%	node21 -> node142
+newpath 6921 6046 moveto
+7193 6535 7465 7025 7737 7514 curveto
+stroke
+gsave 10 dict begin
+7352 6774 moveto 149 -0.5 (Afpsister/Afpbrother) alignedtext
+end grestore
+
+%	node21 -> node166
+newpath 6912 6046 moveto
+6946 6459 6979 6874 7013 7287 curveto
+stroke
+gsave 10 dict begin
+6986 6661 moveto 132 -0.5 (Afpsister/Afpsister) alignedtext
+end grestore
+
+%	node23
+gsave 10 dict begin
+8299 7021 40 18 ellipse_path
+stroke
+gsave 10 dict begin
+8299 7016 moveto 58 -0.5 (Slovakia) alignedtext
+end grestore
+end grestore
+
+%	node22 -> node23
+newpath 7732 7216 moveto
+7910 7155 8089 7093 8267 7032 curveto
+stroke
+gsave 10 dict begin
+8002 7130 moveto 265 -0.5 (AFPCorruptress/AFPet Sunflower Seed) alignedtext
+end grestore
+
+%	node22 -> node34
+newpath 7733 7233 moveto
+7940 7295 8147 7357 8354 7419 curveto
+stroke
+gsave 10 dict begin
+8042 7332 moveto 186 -0.5 (accompanist/backing singer) alignedtext
+end grestore
+
+%	node22 -> node60
+newpath 7679 7233 moveto
+7588 7259 7498 7285 7408 7311 curveto
+stroke
+gsave 10 dict begin
+7538 7280 moveto 319 -0.5 (Lunatic Fringe Member/Lunatic Fringe Member) alignedtext
+end grestore
+
+%	node22 -> node63
+newpath 7716 7242 moveto
+7777 7350 7837 7459 7898 7566 curveto
+stroke
+gsave 10 dict begin
+7831 7399 moveto 147 -0.5 (afpfiance/afphiancee) alignedtext
+end grestore
+
+%	node80
+gsave 10 dict begin
+8816 7649 61 18 ellipse_path
+stroke
+gsave 10 dict begin
+8816 7644 moveto 100 -0.5 (Andrew Nevill) alignedtext
+end grestore
+end grestore
+
+%	node22 -> node80
+newpath 7731 7235 moveto
+8081 7368 8429 7501 8779 7635 curveto
+stroke
+gsave 10 dict begin
+8261 7444 moveto 212 -0.5 (AFPInsultrix/AFPSadisticBa*d) alignedtext
+end grestore
+
+%	node22 -> node87
+newpath 7708 7243 moveto
+7726 7433 7748 7624 7766 7814 curveto
+stroke
+gsave 10 dict begin
+7761 7523 moveto 149 -0.5 (afphiance/afphiancee) alignedtext
+end grestore
+
+%	node22 -> node102
+newpath 7724 7211 moveto
+7784 7164 7844 7116 7904 7069 curveto
+stroke
+gsave 10 dict begin
+7816 7145 moveto 127 -0.5 (reputation/reputor) alignedtext
+end grestore
+
+%	node22 -> node116
+newpath 7689 7210 moveto
+7600 7135 7509 7058 7421 6982 curveto
+stroke
+gsave 10 dict begin
+7553 7102 moveto 185 -0.5 (prodigal son/one bad mother) alignedtext
+end grestore
+
+%	node22 -> node142
+newpath 7708 7243 moveto
+7720 7333 7732 7423 7744 7513 curveto
+stroke
+gsave 10 dict begin
+7750 7373 moveto 145 -0.5 (afpfiancée/afpfiancé) alignedtext
+end grestore
+
+%	node22 -> node147
+newpath 7701 7207 moveto
+7646 7025 7591 6843 7536 6661 curveto
+stroke
+gsave 10 dict begin
+7642 6929 moveto 208 -0.5 (priest of great height/afphrodite) alignedtext
+end grestore
+
+%	node24
+gsave 10 dict begin
+427 13255 33 18 ellipse_path
+stroke
+gsave 10 dict begin
+427 13250 moveto 44 -0.5 (sorcha) alignedtext
+end grestore
+end grestore
+
+%	node25 -> node32
+newpath 7549 7632 moveto
+6967 7218 6386 6804 5804 6391 curveto
+stroke
+gsave 10 dict begin
+6676 7018 moveto 185 -0.5 (AFPSexslave/AFPSexslave) alignedtext
+end grestore
+
+%	node25 -> node50
+newpath 7607 7650 moveto
+7638 7652 7669 7654 7700 7656 curveto
+stroke
+gsave 10 dict begin
+7656 7660 moveto 229 -0.5 (owner of cold ankles/ankle warmer) alignedtext
+end grestore
+
+%	node25 -> node63
+newpath 7605 7640 moveto
+7690 7625 7775 7609 7860 7593 curveto
+stroke
+gsave 10 dict begin
+7739 7622 moveto 268 -0.5 (official unafpiancee/official unafpiance) alignedtext
+end grestore
+
+%	node25 -> node63
+newpath 7605 7640 moveto
+7690 7625 7775 7609 7860 7593 curveto
+stroke
+gsave 10 dict begin
+7739 7622 moveto 542 -0.5 (official unafpiancee/official unafpiance/official unafpiancee/official unafpiance) alignedtext
+end grestore
+
+%	node25 -> node137
+newpath 7568 7629 moveto
+7560 7533 7548 7436 7540 7340 curveto
+stroke
+gsave 10 dict begin
+7578 7479 moveto 153 -0.5 (HONEY!!!/SWEETIE!!!) alignedtext
+end grestore
+
+%	node25 -> node137
+newpath 7568 7629 moveto
+7560 7533 7548 7436 7540 7340 curveto
+stroke
+gsave 10 dict begin
+7578 7479 moveto 100 -0.5 (AFPsis/AFPsis) alignedtext
+end grestore
+
+%	node25 -> node144
+newpath 7573 7629 moveto
+7607 7414 7642 7199 7676 6984 curveto
+stroke
+gsave 10 dict begin
+7648 7301 moveto 165 -0.5 (AFPhiance/AFPhiancee) alignedtext
+end grestore
+
+%	node25 -> node166
+newpath 7547 7633 moveto
+7378 7529 7207 7424 7038 7320 curveto
+stroke
+gsave 10 dict begin
+7292 7483 moveto 153 -0.5 (afpdaughter/afpmum) alignedtext
+end grestore
+
+%	node26
+gsave 10 dict begin
+3700 5959 73 18 ellipse_path
+stroke
+gsave 10 dict begin
+3700 5954 moveto 125 -0.5 (Lawrence Mitchell) alignedtext
+end grestore
+end grestore
+
+%	node27
+gsave 10 dict begin
+7617 7897 36 18 ellipse_path
+stroke
+gsave 10 dict begin
+7617 7892 moveto 51 -0.5 (Spooky) alignedtext
+end grestore
+end grestore
+
+%	node27 -> node50
+newpath 7626 7879 moveto
+7662 7812 7698 7744 7733 7677 curveto
+stroke
+gsave 10 dict begin
+7704 7773 moveto 168 -0.5 (co-adulterer/co-adulterer) alignedtext
+end grestore
+
+%	node27 -> node80
+newpath 7650 7890 moveto
+8021 7813 8394 7736 8766 7659 curveto
+stroke
+gsave 10 dict begin
+8216 7780 moveto 461 -0.5 (AFPWorshipper/AFPGoddess of Andrews Pink & Fluffy Wossnames) alignedtext
+end grestore
+
+%	node28
+gsave 10 dict begin
+10838 8237 35 18 ellipse_path
+stroke
+gsave 10 dict begin
+10838 8232 moveto 49 -0.5 (ext1jdh) alignedtext
+end grestore
+end grestore
+
+%	node29
+gsave 10 dict begin
+12321 19 38 18 ellipse_path
+stroke
+gsave 10 dict begin
+12321 14 moveto 55 -0.5 (Ahchay) alignedtext
+end grestore
+end grestore
+
+%	node30 -> node35
+newpath 9412 6424 moveto
+8902 6706 8390 6988 7880 7271 curveto
+stroke
+gsave 10 dict begin
+8643 6855 moveto 131 -0.5 (afpiancee/afpiance) alignedtext
+end grestore
+
+%	node31
+gsave 10 dict begin
+14203 4479 29 18 ellipse_path
+stroke
+gsave 10 dict begin
+14203 4474 moveto 37 -0.5 (annie) alignedtext
+end grestore
+end grestore
+
+%	node32 -> node36
+newpath 5823 6382 moveto
+6029 6417 6238 6453 6444 6489 curveto
+stroke
+gsave 10 dict begin
+6138 6443 moveto 148 -0.5 (owner/sceptula <SP?>) alignedtext
+end grestore
+
+%	node46
+gsave 10 dict begin
+7113 9260 36 18 ellipse_path
+stroke
+gsave 10 dict begin
+7113 9255 moveto 51 -0.5 (Chrissy) alignedtext
+end grestore
+end grestore
+
+%	node32 -> node46
+newpath 5790 6393 moveto
+6228 7342 6667 8293 7105 9242 curveto
+stroke
+gsave 10 dict begin
+6471 7812 moveto 165 -0.5 (AFPhiancee/AFPhiance) alignedtext
+end grestore
+
+%	node32 -> node85
+newpath 5806 6390 moveto
+6339 6729 6873 7070 7406 7408 curveto
+stroke
+gsave 10 dict begin
+6604 6905 moveto 342 -0.5 (Other bit on the side/Wonderful and Wanton mistress) alignedtext
+end grestore
+
+%	node32 -> node137
+newpath 5809 6390 moveto
+6378 6696 6947 7004 7516 7310 curveto
+stroke
+gsave 10 dict begin
+6660 6855 moveto 139 -0.5 (AFPiance/AFPiance) alignedtext
+end grestore
+
+%	node33
+gsave 10 dict begin
+8504 6480 47 18 ellipse_path
+stroke
+gsave 10 dict begin
+8504 6475 moveto 73 -0.5 (Laurabelle) alignedtext
+end grestore
+end grestore
+
+%	node33 -> node35
+newpath 8490 6497 moveto
+8284 6754 8074 7011 7868 7268 curveto
+stroke
+gsave 10 dict begin
+8203 6877 moveto 291 -0.5 (AFPDivine Advocate/AFPDevil's Advocate) alignedtext
+end grestore
+
+%	node41
+gsave 10 dict begin
+7958 6631 63 18 ellipse_path
+stroke
+gsave 10 dict begin
+7958 6626 moveto 105 -0.5 (Adrian Morgan) alignedtext
+end grestore
+end grestore
+
+%	node33 -> node41
+newpath 8466 6491 moveto
+8311 6533 8157 6576 8004 6619 curveto
+stroke
+gsave 10 dict begin
+8231 6562 moveto 138 -0.5 (afpbrother/afpsister) alignedtext
+end grestore
+
+%	node66
+gsave 10 dict begin
+7497 7498 47 18 ellipse_path
+stroke
+gsave 10 dict begin
+7497 7493 moveto 73 -0.5 (Jens Ayton) alignedtext
+end grestore
+end grestore
+
+%	node33 -> node66
+newpath 8487 6497 moveto
+8164 6824 7837 7154 7514 7481 curveto
+stroke
+gsave 10 dict begin
+8024 6984 moveto 145 -0.5 (afpfiance/afpfiancee) alignedtext
+end grestore
+
+%	node72
+gsave 10 dict begin
+8061 7349 40 18 ellipse_path
+stroke
+gsave 10 dict begin
+8061 7344 moveto 59 -0.5 (caomhin) alignedtext
+end grestore
+end grestore
+
+%	node33 -> node72
+newpath 8495 6498 moveto
+8354 6775 8211 7054 8070 7331 curveto
+stroke
+gsave 10 dict begin
+8306 6909 moveto 140 -0.5 (girlfriend/boyfriend) alignedtext
+end grestore
+
+%	node93
+gsave 10 dict begin
+7892 8369 41 18 ellipse_path
+stroke
+gsave 10 dict begin
+7892 8364 moveto 60 -0.5 (Tachyon) alignedtext
+end grestore
+end grestore
+
+%	node33 -> node93
+newpath 8498 6498 moveto
+8298 7115 8098 7734 7898 8351 curveto
+stroke
+gsave 10 dict begin
+8222 7419 moveto 154 -0.5 (AFPsister/AFPbrother) alignedtext
+end grestore
+
+%	node34 -> node35
+newpath 8354 7419 moveto
+8199 7378 8045 7336 7890 7295 curveto
+stroke
+gsave 10 dict begin
+8116 7362 moveto 140 -0.5 (APFniece/AFPuncle) alignedtext
+end grestore
+
+%	node94
+gsave 10 dict begin
+8729 9137 84 18 ellipse_path
+stroke
+gsave 10 dict begin
+8729 9132 moveto 146 -0.5 (April Goodwin-Smith) alignedtext
+end grestore
+end grestore
+
+%	node34 -> node94
+newpath 8383 7444 moveto
+8496 8002 8611 8561 8725 9119 curveto
+stroke
+gsave 10 dict begin
+8578 8276 moveto 160 -0.5 (afpdalliancer/afpflirter) alignedtext
+end grestore
+
+%	node34 -> node102
+newpath 8362 7412 moveto
+8223 7298 8085 7183 7947 7069 curveto
+stroke
+gsave 10 dict begin
+8152 7246 moveto 123 -0.5 (afpiance/afpiance) alignedtext
+end grestore
+
+%	node42
+gsave 10 dict begin
+7568 7551 39 18 ellipse_path
+stroke
+gsave 10 dict begin
+7568 7546 moveto 57 -0.5 (Jennifer) alignedtext
+end grestore
+end grestore
+
+%	node35 -> node42
+newpath 7836 7302 moveto
+7753 7379 7669 7458 7585 7535 curveto
+stroke
+gsave 10 dict begin
+7711 7425 moveto 121 -0.5 (afpsister/afpsister) alignedtext
+end grestore
+
+%	node35 -> node50
+newpath 7849 7303 moveto
+7815 7415 7782 7529 7748 7641 curveto
+stroke
+gsave 10 dict begin
+7822 7467 moveto 165 -0.5 (AFPhiance/AFPhiancee) alignedtext
+end grestore
+
+%	node67
+gsave 10 dict begin
+9080 10143 46 18 ellipse_path
+stroke
+gsave 10 dict begin
+9080 10138 moveto 70 -0.5 (JennyRad) alignedtext
+end grestore
+end grestore
+
+%	node35 -> node67
+newpath 7862 7303 moveto
+8264 8243 8670 9185 9072 10125 curveto
+stroke
+gsave 10 dict begin
+8491 8709 moveto 255 -0.5 (Afpfont/Afprecipient-of-fontishness) alignedtext
+end grestore
+
+%	node76
+gsave 10 dict begin
+7317 7926 33 18 ellipse_path
+stroke
+gsave 10 dict begin
+7317 7921 moveto 44 -0.5 (ingvar) alignedtext
+end grestore
+end grestore
+
+%	node35 -> node76
+newpath 7840 7302 moveto
+7670 7505 7500 7708 7331 7910 curveto
+stroke
+gsave 10 dict begin
+7609 7600 moveto 131 -0.5 (afpiance/afpiancee) alignedtext
+end grestore
+
+%	node81
+gsave 10 dict begin
+8956 7066 36 18 ellipse_path
+stroke
+gsave 10 dict begin
+8956 7061 moveto 51 -0.5 (Maaike) alignedtext
+end grestore
+end grestore
+
+%	node35 -> node81
+newpath 7892 7277 moveto
+8236 7209 8579 7141 8922 7073 curveto
+stroke
+gsave 10 dict begin
+8405 7182 moveto 121 -0.5 (afpsister/afpsister) alignedtext
+end grestore
+
+%	node84
+gsave 10 dict begin
+9773 8919 66 18 ellipse_path
+stroke
+gsave 10 dict begin
+9773 8914 moveto 111 -0.5 (Petri Holopainen) alignedtext
+end grestore
+end grestore
+
+%	node35 -> node84
+newpath 7873 7301 moveto
+8499 7834 9126 8368 9753 8902 curveto
+stroke
+gsave 10 dict begin
+8813 8109 moveto 154 -0.5 (AFPfiance/AFPfiance) alignedtext
+end grestore
+
+%	node35 -> node94
+newpath 7863 7303 moveto
+8148 7908 8435 8514 8720 9119 curveto
+stroke
+gsave 10 dict begin
+8315 8206 moveto 310 -0.5 (afpfiance in the garden/afpfiancee in the garden) alignedtext
+end grestore
+
+%	node35 -> node102
+newpath 7860 7267 moveto
+7880 7202 7900 7135 7920 7070 curveto
+stroke
+gsave 10 dict begin
+7914 7163 moveto 131 -0.5 (afpiance/afpiancee) alignedtext
+end grestore
+
+%	node35 -> node142
+newpath 7846 7303 moveto
+7816 7373 7784 7443 7754 7514 curveto
+stroke
+gsave 10 dict begin
+7824 7403 moveto 306 -0.5 (afpiancee'/afpiance' - with proper french accent) alignedtext
+end grestore
+
+%	node150
+gsave 10 dict begin
+9567 7782 38 18 ellipse_path
+stroke
+gsave 10 dict begin
+9567 7777 moveto 55 -0.5 (Graycat) alignedtext
+end grestore
+end grestore
+
+%	node35 -> node150
+newpath 7889 7295 moveto
+8437 7454 8986 7614 9534 7773 curveto
+stroke
+gsave 10 dict begin
+8710 7540 moveto 104 -0.5 (fiancée/fiancée) alignedtext
+end grestore
+
+%	node36 -> node41
+newpath 6548 6502 moveto
+6998 6542 7448 6585 7898 6626 curveto
+stroke
+gsave 10 dict begin
+7226 6571 moveto 155 -0.5 (male afpsister/afpsister) alignedtext
+end grestore
+
+%	node36 -> node137
+newpath 6515 6514 moveto
+6850 6778 7185 7044 7520 7308 curveto
+stroke
+gsave 10 dict begin
+7016 6916 moveto 100 -0.5 (AFPsis/AFPsis) alignedtext
+end grestore
+
+%	node37
+gsave 10 dict begin
+7871 13679 47 18 ellipse_path
+stroke
+gsave 10 dict begin
+7871 13674 moveto 72 -0.5 (Skrewtape) alignedtext
+end grestore
+end grestore
+
+%	node38
+gsave 10 dict begin
+6579 8259 55 18 ellipse_path
+stroke
+gsave 10 dict begin
+6579 8254 moveto 88 -0.5 (SimonCallan) alignedtext
+end grestore
+end grestore
+
+%	node38 -> node39
+newpath 6560 8276 moveto
+6146 8657 5732 9040 5318 9420 curveto
+stroke
+gsave 10 dict begin
+5939 8855 moveto 117 -0.5 (evil twin/evil twin) alignedtext
+end grestore
+
+%	node40 -> node63
+newpath 7894 7740 moveto
+7898 7694 7903 7648 7907 7602 curveto
+stroke
+gsave 10 dict begin
+7924 7666 moveto 90 -0.5 (brother/sister) alignedtext
+end grestore
+
+%	node40 -> node66
+newpath 7871 7744 moveto
+7755 7668 7637 7590 7521 7514 curveto
+stroke
+gsave 10 dict begin
+7694 7635 moveto 145 -0.5 (afpfiance/afpfiancee) alignedtext
+end grestore
+
+%	node40 -> node66
+newpath 7871 7744 moveto
+7755 7668 7637 7590 7521 7514 curveto
+stroke
+gsave 10 dict begin
+7694 7635 moveto 146 -0.5 (#aftopicer/#aftopicee) alignedtext
+end grestore
+
+%	node40 -> node85
+newpath 7872 7744 moveto
+7730 7641 7587 7537 7445 7434 curveto
+stroke
+gsave 10 dict begin
+7659 7596 moveto 154 -0.5 (AFPiancee/AFPiancee) alignedtext
+end grestore
+
+%	node114
+gsave 10 dict begin
+7767 8032 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+7767 8027 moveto 21 -0.5 (pol) alignedtext
+end grestore
+end grestore
+
+%	node40 -> node114
+newpath 7884 7776 moveto
+7848 7855 7810 7935 7775 8015 curveto
+stroke
+gsave 10 dict begin
+7853 7890 moveto 93 -0.5 (Owner/Genie) alignedtext
+end grestore
+
+%	node40 -> node114
+newpath 7884 7776 moveto
+7848 7855 7810 7935 7775 8015 curveto
+stroke
+gsave 10 dict begin
+7853 7890 moveto 158 -0.5 (AFPhiance/AFPhiance) alignedtext
+end grestore
+
+%	node40 -> node124
+newpath 7861 7762 moveto
+7620 7789 7378 7818 7137 7846 curveto
+stroke
+gsave 10 dict begin
+7499 7811 moveto 165 -0.5 (AFPhiance/AFPhiancee) alignedtext
+end grestore
+
+%	node40 -> node127
+newpath 7915 7770 moveto
+8268 7950 8620 8131 8972 8311 curveto
+stroke
+gsave 10 dict begin
+8444 8048 moveto 248 -0.5 (other Israeli AFPer/other Israeli AFPer) alignedtext
+end grestore
+
+%	node42 -> node116
+newpath 7563 7533 moveto
+7511 7350 7457 7166 7406 6983 curveto
+stroke
+gsave 10 dict begin
+7508 7253 moveto 154 -0.5 (AFPsister/AFPbrother) alignedtext
+end grestore
+
+%	node43
+gsave 10 dict begin
+9924 11699 37 18 ellipse_path
+stroke
+gsave 10 dict begin
+9924 11694 moveto 53 -0.5 (cjgriggs) alignedtext
+end grestore
+end grestore
+
+%	node44
+gsave 10 dict begin
+120 5404 29 18 ellipse_path
+stroke
+gsave 10 dict begin
+120 5399 moveto 37 -0.5 (bjorn) alignedtext
+end grestore
+end grestore
+
+%	node45
+gsave 10 dict begin
+90 1995 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+90 1990 moveto 28 -0.5 (Ceri) alignedtext
+end grestore
+end grestore
+
+%	node46 -> node63
+newpath 7121 9242 moveto
+7381 8696 7640 8148 7899 7602 curveto
+stroke
+gsave 10 dict begin
+7534 8417 moveto 155 -0.5 (afpfiance/affphiancee) alignedtext
+end grestore
+
+%	node46 -> node93
+newpath 7127 9243 moveto
+7377 8958 7628 8671 7877 8386 curveto
+stroke
+gsave 10 dict begin
+7526 8809 moveto 165 -0.5 (AFPhiancee/AFPhiance) alignedtext
+end grestore
+
+%	node46 -> node137
+newpath 7117 9242 moveto
+7256 8608 7395 7974 7534 7340 curveto
+stroke
+gsave 10 dict begin
+7349 8286 moveto 100 -0.5 (AFPsis/AFPsis) alignedtext
+end grestore
+
+%	node47
+gsave 10 dict begin
+28 7351 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+28 7346 moveto 28 -0.5 (Gaa) alignedtext
+end grestore
+end grestore
+
+%	node49
+gsave 10 dict begin
+3139 85 54 18 ellipse_path
+stroke
+gsave 10 dict begin
+3139 80 moveto 87 -0.5 (don_shawzo) alignedtext
+end grestore
+end grestore
+
+%	node51
+gsave 10 dict begin
+14256 2627 30 18 ellipse_path
+stroke
+gsave 10 dict begin
+14256 2622 moveto 38 -0.5 (Byatt) alignedtext
+end grestore
+end grestore
+
+%	node52
+gsave 10 dict begin
+11787 10888 54 18 ellipse_path
+stroke
+gsave 10 dict begin
+11787 10883 moveto 86 -0.5 (Ununnilium) alignedtext
+end grestore
+end grestore
+
+%	node53
+gsave 10 dict begin
+13933 6000 50 18 ellipse_path
+stroke
+gsave 10 dict begin
+13933 5995 moveto 78 -0.5 (Nanny Ogg) alignedtext
+end grestore
+end grestore
+
+%	node54
+gsave 10 dict begin
+5072 2848 51 18 ellipse_path
+stroke
+gsave 10 dict begin
+5072 2843 moveto 81 -0.5 (Salamander) alignedtext
+end grestore
+end grestore
+
+%	node55
+gsave 10 dict begin
+179 3673 55 18 ellipse_path
+stroke
+gsave 10 dict begin
+179 3668 moveto 89 -0.5 (annie_lexion) alignedtext
+end grestore
+end grestore
+
+%	node56 -> node63
+newpath 7486 7548 moveto
+7608 7558 7731 7570 7853 7580 curveto
+stroke
+gsave 10 dict begin
+7682 7572 moveto 149 -0.5 (afphiancee/afphiance) alignedtext
+end grestore
+
+%	node56 -> node63
+newpath 7486 7548 moveto
+7608 7558 7731 7570 7853 7580 curveto
+stroke
+gsave 10 dict begin
+7682 7572 moveto 400 -0.5 (afphiancee/afphiance./afpsis/afpbroafphiancee/afphiance.) alignedtext
+end grestore
+
+%	node56 -> node85
+newpath 7452 7528 moveto
+7445 7499 7438 7468 7430 7439 curveto
+stroke
+gsave 10 dict begin
+7465 7478 moveto 84 -0.5 (afpsis/afpsis) alignedtext
+end grestore
+
+%	node56 -> node108
+newpath 7454 7528 moveto
+7441 7428 7428 7327 7416 7227 curveto
+stroke
+gsave 10 dict begin
+7459 7372 moveto 127 -0.5 (mega-me/mini-me) alignedtext
+end grestore
+
+%	node57
+gsave 10 dict begin
+515 87 31 18 ellipse_path
+stroke
+gsave 10 dict begin
+515 82 moveto 40 -0.5 (vashti) alignedtext
+end grestore
+end grestore
+
+%	node58
+gsave 10 dict begin
+4143 11630 34 18 ellipse_path
+stroke
+gsave 10 dict begin
+4143 11625 moveto 46 -0.5 (Herald) alignedtext
+end grestore
+end grestore
+
+%	node59
+gsave 10 dict begin
+6829 4442 48 18 ellipse_path
+stroke
+gsave 10 dict begin
+6829 4437 moveto 74 -0.5 (Winterbay) alignedtext
+end grestore
+end grestore
+
+%	node60 -> node61
+newpath 7372 7339 moveto
+7383 7477 7394 7616 7405 7754 curveto
+stroke
+gsave 10 dict begin
+7412 7541 moveto 167 -0.5 (influencee/bad influence) alignedtext
+end grestore
+
+%	node60 -> node63
+newpath 7400 7335 moveto
+7559 7412 7718 7492 7877 7569 curveto
+stroke
+gsave 10 dict begin
+7639 7459 moveto 155 -0.5 (afpfiancee./afpfiancee) alignedtext
+end grestore
+
+%	node60 -> node102
+newpath 7400 7307 moveto
+7564 7227 7730 7146 7894 7067 curveto
+stroke
+gsave 10 dict begin
+7648 7193 moveto 76 -0.5 (james/jesse) alignedtext
+end grestore
+
+%	node60 -> node108
+newpath 7378 7303 moveto
+7388 7278 7397 7252 7407 7227 curveto
+stroke
+gsave 10 dict begin
+7416 7260 moveto 168 -0.5 (Afpadopter/Afpadoptee) alignedtext
+end grestore
+
+%	node60 -> node116
+newpath 7373 7303 moveto
+7382 7197 7391 7089 7400 6983 curveto
+stroke
+gsave 10 dict begin
+7410 7138 moveto 175 -0.5 (cccb suppliee/cccb supplier) alignedtext
+end grestore
+
+%	node60 -> node124
+newpath 7362 7339 moveto
+7280 7503 7197 7668 7115 7833 curveto
+stroke
+gsave 10 dict begin
+7262 7580 moveto 136 -0.5 (AFPparent/AFPson) alignedtext
+end grestore
+
+%	node60 -> node131
+newpath 7353 7338 moveto
+7171 7502 6990 7669 6808 7833 curveto
+stroke
+gsave 10 dict begin
+7081 7591 moveto 168 -0.5 (AFPmum/AFPdaughter) alignedtext
+end grestore
+
+%	node60 -> node137
+newpath 7416 7321 moveto
+7447 7321 7478 7322 7509 7322 curveto
+stroke
+gsave 10 dict begin
+7454 7328 moveto 100 -0.5 (AFPsis/AFPsis) alignedtext
+end grestore
+
+%	node60 -> node142
+newpath 7397 7336 moveto
+7507 7397 7616 7458 7725 7519 curveto
+stroke
+gsave 10 dict begin
+7558 7433 moveto 168 -0.5 (Afpadopter/Afpadoptee) alignedtext
+end grestore
+
+%	node155
+gsave 10 dict begin
+7583 8226 44 18 ellipse_path
+stroke
+gsave 10 dict begin
+7583 8221 moveto 67 -0.5 (annushka) alignedtext
+end grestore
+end grestore
+
+%	node60 -> node155
+newpath 7375 7339 moveto
+7443 7628 7511 7919 7579 8208 curveto
+stroke
+gsave 10 dict begin
+7501 7768 moveto 157 -0.5 (AFPmum/Afpadoptee) alignedtext
+end grestore
+
+%	node60 -> node166
+newpath 7326 7319 moveto
+7236 7316 7146 7311 7056 7307 curveto
+stroke
+gsave 10 dict begin
+7192 7320 moveto 170 -0.5 (afpdaughter/afpmum#2) alignedtext
+end grestore
+
+%	node61 -> node76
+newpath 7396 7789 moveto
+7373 7829 7350 7869 7327 7909 curveto
+stroke
+gsave 10 dict begin
+7385 7844 moveto 77 -0.5 (clone/clone) alignedtext
+end grestore
+
+%	node83
+gsave 10 dict begin
+7492 7400 31 18 ellipse_path
+stroke
+gsave 10 dict begin
+7492 7395 moveto 40 -0.5 (Orjan) alignedtext
+end grestore
+end grestore
+
+%	node61 -> node83
+newpath 7410 7754 moveto
+7436 7642 7462 7530 7488 7418 curveto
+stroke
+gsave 10 dict begin
+7473 7581 moveto 85 -0.5 (Clone/Clone) alignedtext
+end grestore
+
+%	node90
+gsave 10 dict begin
+7354 8200 34 18 ellipse_path
+stroke
+gsave 10 dict begin
+7354 8195 moveto 46 -0.5 (Kelvix) alignedtext
+end grestore
+end grestore
+
+%	node61 -> node90
+newpath 7404 7790 moveto
+7388 7920 7372 8052 7356 8182 curveto
+stroke
+gsave 10 dict begin
+7404 7981 moveto 131 -0.5 (afpiancee/afpiance) alignedtext
+end grestore
+
+%	node62
+gsave 10 dict begin
+10372 4577 47 18 ellipse_path
+stroke
+gsave 10 dict begin
+10372 4572 moveto 72 -0.5 (Brucianna) alignedtext
+end grestore
+end grestore
+
+%	node70
+gsave 10 dict begin
+6310 9881 32 18 ellipse_path
+stroke
+gsave 10 dict begin
+6310 9876 moveto 43 -0.5 (naomi) alignedtext
+end grestore
+end grestore
+
+%	node63 -> node70
+newpath 7896 7602 moveto
+7372 8355 6846 9111 6322 9864 curveto
+stroke
+gsave 10 dict begin
+7133 8727 moveto 218 -0.5 (not-#afpfiancee/not-#afpfiance) alignedtext
+end grestore
+
+%	node63 -> node82
+newpath 7858 7575 moveto
+7715 7550 7572 7524 7429 7499 curveto
+stroke
+gsave 10 dict begin
+7654 7546 moveto 123 -0.5 (afphiace/afphiace) alignedtext
+end grestore
+
+%	node63 -> node85
+newpath 7869 7571 moveto
+7730 7524 7589 7476 7450 7429 curveto
+stroke
+gsave 10 dict begin
+7667 7509 moveto 146 -0.5 (AFPiancee/AFPiance) alignedtext
+end grestore
+
+%	node63 -> node90
+newpath 7892 7601 moveto
+7718 7796 7543 7990 7369 8184 curveto
+stroke
+gsave 10 dict begin
+7655 7887 moveto 131 -0.5 (afpiancee/afpiance) alignedtext
+end grestore
+
+%	node99
+gsave 10 dict begin
+7360 7661 43 18 ellipse_path
+stroke
+gsave 10 dict begin
+7360 7656 moveto 64 -0.5 (Grymma) alignedtext
+end grestore
+end grestore
+
+%	node63 -> node99
+newpath 7856 7591 moveto
+7705 7612 7553 7634 7401 7655 curveto
+stroke
+gsave 10 dict begin
+7634 7629 moveto 149 -0.5 (afphiancee/afphiance) alignedtext
+end grestore
+
+%	node63 -> node108
+newpath 7886 7567 moveto
+7736 7453 7585 7338 7434 7224 curveto
+stroke
+gsave 10 dict begin
+7661 7403 moveto 131 -0.5 (afpfiance/afpiance) alignedtext
+end grestore
+
+%	node63 -> node109
+newpath 7852 7586 moveto
+7797 7588 7742 7590 7687 7592 curveto
+stroke
+gsave 10 dict begin
+7778 7595 moveto 145 -0.5 (afpfiancee/afpfiance) alignedtext
+end grestore
+
+%	node63 -> node122
+newpath 7881 7568 moveto
+7548 7371 7215 7175 6881 6978 curveto
+stroke
+gsave 10 dict begin
+7384 7282 moveto 123 -0.5 (afpiance/afpiance) alignedtext
+end grestore
+
+%	node63 -> node127
+newpath 7932 7600 moveto
+8280 7836 8628 8073 8976 8310 curveto
+stroke
+gsave 10 dict begin
+8452 7961 moveto 159 -0.5 (AFPwife/AFPhusband) alignedtext
+end grestore
+
+%	node63 -> node137
+newpath 7885 7567 moveto
+7775 7491 7666 7412 7557 7336 curveto
+stroke
+gsave 10 dict begin
+7723 7460 moveto 154 -0.5 (AFPfiance/AFPfiance) alignedtext
+end grestore
+
+%	node152
+gsave 10 dict begin
+7212 7417 32 18 ellipse_path
+stroke
+gsave 10 dict begin
+7212 7412 moveto 43 -0.5 (Anejo) alignedtext
+end grestore
+end grestore
+
+%	node63 -> node152
+newpath 7863 7573 moveto
+7656 7524 7449 7473 7242 7424 curveto
+stroke
+gsave 10 dict begin
+7560 7507 moveto 131 -0.5 (afpfiance/afpiance) alignedtext
+end grestore
+
+%	node63 -> node155
+newpath 7899 7602 moveto
+7797 7804 7694 8006 7592 8208 curveto
+stroke
+gsave 10 dict begin
+7769 7900 moveto 138 -0.5 (afpfiance/ afpfiance) alignedtext
+end grestore
+
+%	node64
+gsave 10 dict begin
+4695 8205 66 18 ellipse_path
+stroke
+gsave 10 dict begin
+4695 8200 moveto 110 -0.5 (Bertrand Russell) alignedtext
+end grestore
+end grestore
+
+%	node65
+gsave 10 dict begin
+9820 1826 39 18 ellipse_path
+stroke
+gsave 10 dict begin
+9820 1821 moveto 57 -0.5 (claudine) alignedtext
+end grestore
+end grestore
+
+%	node66 -> node71
+newpath 7490 7480 moveto
+7373 7185 7257 6889 7140 6594 curveto
+stroke
+gsave 10 dict begin
+7339 7032 moveto 213 -0.5 (#afpsomething/#afpsomething) alignedtext
+end grestore
+
+%	node66 -> node85
+newpath 7481 7481 moveto
+7468 7466 7454 7451 7441 7437 curveto
+stroke
+gsave 10 dict begin
+7485 7454 moveto 229 -0.5 (#afpjiggleappreciator/#afpjiggler) alignedtext
+end grestore
+
+%	node143
+gsave 10 dict begin
+7853 9862 86 18 ellipse_path
+stroke
+gsave 10 dict begin
+7853 9857 moveto 150 -0.5 (Speaker-to-Customers) alignedtext
+end grestore
+end grestore
+
+%	node67 -> node143
+newpath 9040 10134 moveto
+8663 10048 8288 9961 7911 9875 curveto
+stroke
+gsave 10 dict begin
+8466 10009 moveto 156 -0.5 (Afpfiancée/Afpfiancé) alignedtext
+end grestore
+
+%	node149
+gsave 10 dict begin
+8002 8970 81 18 ellipse_path
+stroke
+gsave 10 dict begin
+8002 8965 moveto 141 -0.5 (Daibhid Chiennedelh) alignedtext
+end grestore
+end grestore
+
+%	node67 -> node149
+newpath 9064 10126 moveto
+8715 9747 8367 9367 8018 8988 curveto
+stroke
+gsave 10 dict begin
+8565 9551 moveto 156 -0.5 (Afpfiancée/Afpfiancé) alignedtext
+end grestore
+
+%	node68 -> node71
+newpath 7634 7469 moveto
+7470 7178 7306 6884 7143 6593 curveto
+stroke
+gsave 10 dict begin
+7412 7026 moveto 123 -0.5 (AFP er?/AFP erm?) alignedtext
+end grestore
+
+%	node68 -> node85
+newpath 7600 7474 moveto
+7550 7459 7500 7444 7450 7429 curveto
+stroke
+gsave 10 dict begin
+7535 7461 moveto 146 -0.5 (AFPiancee/AFPiance) alignedtext
+end grestore
+
+%	node101
+gsave 10 dict begin
+7042 8545 40 18 ellipse_path
+stroke
+gsave 10 dict begin
+7042 8540 moveto 59 -0.5 (charlotte) alignedtext
+end grestore
+end grestore
+
+%	node68 -> node101
+newpath 7634 7505 moveto
+7440 7845 7246 8187 7052 8528 curveto
+stroke
+gsave 10 dict begin
+7367 8011 moveto 113 -0.5 (*hug*er/*hug*ee) alignedtext
+end grestore
+
+%	node69
+gsave 10 dict begin
+4805 6611 38 18 ellipse_path
+stroke
+gsave 10 dict begin
+4805 6606 moveto 55 -0.5 (kuroniji) alignedtext
+end grestore
+end grestore
+
+%	node126
+gsave 10 dict begin
+6328 8899 44 18 ellipse_path
+stroke
+gsave 10 dict begin
+6328 8894 moveto 67 -0.5 (Alex TEH) alignedtext
+end grestore
+end grestore
+
+%	node70 -> node126
+newpath 6310 9863 moveto
+6316 9548 6322 9232 6328 8917 curveto
+stroke
+gsave 10 dict begin
+6343 9385 moveto 95 -0.5 (Brother/Sister) alignedtext
+end grestore
+
+%	node71 -> node85
+newpath 7139 6594 moveto
+7232 6863 7327 7134 7420 7403 curveto
+stroke
+gsave 10 dict begin
+7303 6993 moveto 122 -0.5 (sister \(irl\)/sister \(irl\)) alignedtext
+end grestore
+
+%	node88
+gsave 10 dict begin
+7487 7925 32 18 ellipse_path
+stroke
+gsave 10 dict begin
+7487 7920 moveto 43 -0.5 (Isuldir) alignedtext
+end grestore
+end grestore
+
+%	node71 -> node88
+newpath 7138 6594 moveto
+7252 7031 7368 7470 7482 7907 curveto
+stroke
+gsave 10 dict begin
+7334 7245 moveto 158 -0.5 (AFPhiance/AFPhiance) alignedtext
+end grestore
+
+%	node89
+gsave 10 dict begin
+7734 7400 42 18 ellipse_path
+stroke
+gsave 10 dict begin
+7734 7395 moveto 62 -0.5 (perfdrug) alignedtext
+end grestore
+end grestore
+
+%	node71 -> node89
+newpath 7145 6592 moveto
+7337 6855 7530 7119 7721 7383 curveto
+stroke
+gsave 10 dict begin
+7457 6983 moveto 70 -0.5 (owner/pet) alignedtext
+end grestore
+
+%	node91
+gsave 10 dict begin
+7708 6095 55 18 ellipse_path
+stroke
+gsave 10 dict begin
+7708 6090 moveto 88 -0.5 (Andrew Irish) alignedtext
+end grestore
+end grestore
+
+%	node71 -> node91
+newpath 7150 6562 moveto
+7328 6412 7509 6261 7688 6112 curveto
+stroke
+gsave 10 dict begin
+7420 6342 moveto 379 -0.5 (afpstep cousin once removed/afpstep cousin once removed) alignedtext
+end grestore
+
+%	node96
+gsave 10 dict begin
+6291 7091 39 18 ellipse_path
+stroke
+gsave 10 dict begin
+6291 7086 moveto 57 -0.5 (catmum) alignedtext
+end grestore
+end grestore
+
+%	node71 -> node96
+newpath 7113 6588 moveto
+6848 6750 6580 6914 6315 7077 curveto
+stroke
+gsave 10 dict begin
+6712 6840 moveto 154 -0.5 (daughter \(irl\)/mum \(irl\)) alignedtext
+end grestore
+
+%	node71 -> node116
+newpath 7144 6593 moveto
+7226 6710 7308 6830 7389 6947 curveto
+stroke
+gsave 10 dict begin
+7291 6765 moveto 245 -0.5 (afpsomethingelse/afpsomethingelse) alignedtext
+end grestore
+
+%	node71 -> node117
+newpath 7145 6592 moveto
+7280 6778 7415 6966 7550 7152 curveto
+stroke
+gsave 10 dict begin
+7371 6867 moveto 139 -0.5 (#afpsister/#afpsister) alignedtext
+end grestore
+
+%	node71 -> node122
+newpath 7122 6592 moveto
+7039 6712 6955 6830 6872 6950 curveto
+stroke
+gsave 10 dict begin
+7021 6766 moveto 418 -0.5 (AFPsisterinunderagesnoggery/AFPsisterinunderagesnoggery) alignedtext
+end grestore
+
+%	node71 -> node124
+newpath 7133 6594 moveto
+7124 7006 7115 7420 7106 7832 curveto
+stroke
+gsave 10 dict begin
+7143 7208 moveto 149 -0.5 (AFPuncle/AFPcousin) alignedtext
+end grestore
+
+%	node130
+gsave 10 dict begin
+7371 5363 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+7371 5358 moveto 23 -0.5 (ach) alignedtext
+end grestore
+end grestore
+
+%	node71 -> node130
+newpath 7137 6558 moveto
+7213 6166 7291 5773 7367 5381 curveto
+stroke
+gsave 10 dict begin
+7276 5964 moveto 157 -0.5 (#afpdaughter/#afpdad) alignedtext
+end grestore
+
+%	node71 -> node131
+newpath 7128 6594 moveto
+7019 7006 6906 7418 6797 7830 curveto
+stroke
+gsave 10 dict begin
+6986 7207 moveto 170 -0.5 (#afpdaughter/#afpmum) alignedtext
+end grestore
+
+%	node73
+gsave 10 dict begin
+14209 7646 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+14209 7641 moveto 29 -0.5 (mist) alignedtext
+end grestore
+end grestore
+
+%	node74
+gsave 10 dict begin
+5481 13597 28 18 ellipse_path
+stroke
+gsave 10 dict begin
+5481 13592 moveto 35 -0.5 (mule) alignedtext
+end grestore
+end grestore
+
+%	node75 -> node87
+newpath 8385 7905 moveto
+8189 7882 7991 7858 7795 7835 curveto
+stroke
+gsave 10 dict begin
+8090 7877 moveto 126 -0.5 (afpson/afpmother) alignedtext
+end grestore
+
+%	node76 -> node83
+newpath 7323 7908 moveto
+7377 7745 7432 7581 7486 7418 curveto
+stroke
+gsave 10 dict begin
+7428 7658 moveto 85 -0.5 (Clone/Clone) alignedtext
+end grestore
+
+%	node77
+gsave 10 dict begin
+14027 9420 72 18 ellipse_path
+stroke
+gsave 10 dict begin
+14027 9415 moveto 123 -0.5 (Therese Wikström) alignedtext
+end grestore
+end grestore
+
+%	node78
+gsave 10 dict begin
+12270 1912 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+12270 1907 moveto 25 -0.5 (Rid) alignedtext
+end grestore
+end grestore
+
+%	node79
+gsave 10 dict begin
+2097 5556 52 18 ellipse_path
+stroke
+gsave 10 dict begin
+2097 5551 moveto 83 -0.5 (palndrumm) alignedtext
+end grestore
+end grestore
+
+%	node82 -> node137
+newpath 7414 7478 moveto
+7451 7431 7488 7385 7525 7338 curveto
+stroke
+gsave 10 dict begin
+7493 7403 moveto 84 -0.5 (afpsis/afpsis) alignedtext
+end grestore
+
+%	node139
+gsave 10 dict begin
+9473 5334 33 18 ellipse_path
+stroke
+gsave 10 dict begin
+9473 5329 moveto 45 -0.5 (Marco) alignedtext
+end grestore
+end grestore
+
+%	node83 -> node139
+newpath 7507 7384 moveto
+8157 6706 8808 6028 9458 5350 curveto
+stroke
+gsave 10 dict begin
+8506 6362 moveto 330 -0.5 (vicious battle companion/vicious battle companion) alignedtext
+end grestore
+
+%	node85 -> node88
+newpath 7428 7439 moveto
+7447 7595 7467 7751 7485 7907 curveto
+stroke
+gsave 10 dict begin
+7480 7668 moveto 158 -0.5 (AFPhiance/AFPhiance) alignedtext
+end grestore
+
+%	node85 -> node89
+newpath 7453 7419 moveto
+7532 7414 7613 7408 7692 7403 curveto
+stroke
+gsave 10 dict begin
+7580 7417 moveto 234 -0.5 (AFPbitontheside/AFPbitontheside) alignedtext
+end grestore
+
+%	node85 -> node96
+newpath 7401 7414 moveto
+7042 7309 6683 7205 6324 7101 curveto
+stroke
+gsave 10 dict begin
+6858 7263 moveto 154 -0.5 (mum \(irl\)/daughter \(irl\)) alignedtext
+end grestore
+
+%	node85 -> node101
+newpath 7420 7439 moveto
+7296 7801 7172 8165 7048 8527 curveto
+stroke
+gsave 10 dict begin
+7258 7978 moveto 170 -0.5 (#afpfiancee/#afpfiancee) alignedtext
+end grestore
+
+%	node85 -> node102
+newpath 7444 7407 moveto
+7596 7295 7751 7181 7903 7069 curveto
+stroke
+gsave 10 dict begin
+7676 7243 moveto 131 -0.5 (afpiance/afpiancee) alignedtext
+end grestore
+
+%	node85 -> node103
+newpath 7401 7428 moveto
+7041 7530 6681 7632 6321 7734 curveto
+stroke
+gsave 10 dict begin
+6858 7589 moveto 159 -0.5 (AFPwife/AFPhusband) alignedtext
+end grestore
+
+%	node85 -> node103
+newpath 7401 7428 moveto
+7041 7530 6681 7632 6321 7734 curveto
+stroke
+gsave 10 dict begin
+6858 7589 moveto 123 -0.5 (waterer/afpidistra) alignedtext
+end grestore
+
+%	node85 -> node124
+newpath 7414 7437 moveto
+7316 7569 7216 7701 7118 7833 curveto
+stroke
+gsave 10 dict begin
+7290 7630 moveto 173 -0.5 (geographer/geographesse) alignedtext
+end grestore
+
+%	node146
+gsave 10 dict begin
+7524 7749 64 18 ellipse_path
+stroke
+gsave 10 dict begin
+7524 7744 moveto 106 -0.5 (Peter Cowderoy) alignedtext
+end grestore
+end grestore
+
+%	node85 -> node146
+newpath 7431 7439 moveto
+7460 7536 7490 7634 7519 7731 curveto
+stroke
+gsave 10 dict begin
+7499 7580 moveto 145 -0.5 (afpfiancee/afpfiance) alignedtext
+end grestore
+
+%	node86
+gsave 10 dict begin
+5452 32 53 18 ellipse_path
+stroke
+gsave 10 dict begin
+5452 27 moveto 85 -0.5 (Arwen Lune) alignedtext
+end grestore
+end grestore
+
+%	node91 -> node108
+newpath 7703 6113 moveto
+7609 6472 7513 6832 7419 7191 curveto
+stroke
+gsave 10 dict begin
+7585 6647 moveto 152 -0.5 (Friend/anchor in sanity) alignedtext
+end grestore
+
+%	node92
+gsave 10 dict begin
+8042 8008 31 18 ellipse_path
+stroke
+gsave 10 dict begin
+8042 8003 moveto 41 -0.5 (Marie) alignedtext
+end grestore
+end grestore
+
+%	node92 -> node93
+newpath 8035 8026 moveto
+7989 8134 7945 8243 7899 8351 curveto
+stroke
+gsave 10 dict begin
+7991 8183 moveto 206 -0.5 (AFPotherRee/AFPotherMark) alignedtext
+end grestore
+
+%	node93 -> node137
+newpath 7886 8351 moveto
+7772 8014 7658 7677 7544 7340 curveto
+stroke
+gsave 10 dict begin
+7739 7840 moveto 154 -0.5 (AFPfiance/AFPfiance) alignedtext
+end grestore
+
+%	node94 -> node102
+newpath 8722 9119 moveto
+8459 8436 8196 7753 7933 7070 curveto
+stroke
+gsave 10 dict begin
+8351 8089 moveto 165 -0.5 (afpiance/maid of honour) alignedtext
+end grestore
+
+%	node167
+gsave 10 dict begin
+8365 8402 55 18 ellipse_path
+stroke
+gsave 10 dict begin
+8365 8397 moveto 89 -0.5 (David Sander) alignedtext
+end grestore
+end grestore
+
+%	node94 -> node167
+newpath 8720 9119 moveto
+8605 8886 8489 8653 8374 8420 curveto
+stroke
+gsave 10 dict begin
+8571 8764 moveto 409 -0.5 (afpfiance-in-dangerous-times/afpfiance-in-dangerous-times) alignedtext
+end grestore
+
+%	node95
+gsave 10 dict begin
+12188 7259 35 18 ellipse_path
+stroke
+gsave 10 dict begin
+12188 7254 moveto 49 -0.5 (mariab) alignedtext
+end grestore
+end grestore
+
+%	node97
+gsave 10 dict begin
+3056 13525 35 18 ellipse_path
+stroke
+gsave 10 dict begin
+3056 13520 moveto 48 -0.5 (nyospe) alignedtext
+end grestore
+end grestore
+
+%	node98
+gsave 10 dict begin
+3633 4575 42 18 ellipse_path
+stroke
+gsave 10 dict begin
+3633 4570 moveto 63 -0.5 (Matthew) alignedtext
+end grestore
+end grestore
+
+%	node100
+gsave 10 dict begin
+9084 73 32 18 ellipse_path
+stroke
+gsave 10 dict begin
+9084 68 moveto 43 -0.5 (Jacqui) alignedtext
+end grestore
+end grestore
+
+%	node104
+gsave 10 dict begin
+9594 3242 43 18 ellipse_path
+stroke
+gsave 10 dict begin
+9594 3237 moveto 64 -0.5 (Warwick) alignedtext
+end grestore
+end grestore
+
+%	node105
+gsave 10 dict begin
+10694 6315 54 18 ellipse_path
+stroke
+gsave 10 dict begin
+10694 6310 moveto 86 -0.5 (Deadly Dave) alignedtext
+end grestore
+end grestore
+
+%	node106
+gsave 10 dict begin
+2355 10907 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+2355 10902 moveto 29 -0.5 (Mik) alignedtext
+end grestore
+end grestore
+
+%	node107
+gsave 10 dict begin
+8679 3937 54 18 ellipse_path
+stroke
+gsave 10 dict begin
+8679 3932 moveto 86 -0.5 (asukadagger) alignedtext
+end grestore
+end grestore
+
+%	node108 -> node125
+newpath 7407 7227 moveto
+7360 7348 7315 7471 7268 7592 curveto
+stroke
+gsave 10 dict begin
+7361 7404 moveto 165 -0.5 (AFPhiance/AFPhiancee) alignedtext
+end grestore
+
+%	node108 -> node147
+newpath 7418 7191 moveto
+7454 7015 7490 6837 7527 6661 curveto
+stroke
+gsave 10 dict begin
+7496 6921 moveto 196 -0.5 (Milkybar Kid/Milkybar eater) alignedtext
+end grestore
+
+%	node154
+gsave 10 dict begin
+5744 8319 43 18 ellipse_path
+stroke
+gsave 10 dict begin
+5744 8314 moveto 65 -0.5 (St-Lemur) alignedtext
+end grestore
+end grestore
+
+%	node108 -> node154
+newpath 7392 7224 moveto
+6851 7584 6308 7944 5767 8304 curveto
+stroke
+gsave 10 dict begin
+6579 7771 moveto 151 -0.5 (frightener/hider-from) alignedtext
+end grestore
+
+%	node111
+gsave 10 dict begin
+3593 3008 37 18 ellipse_path
+stroke
+gsave 10 dict begin
+3593 3003 moveto 52 -0.5 (Tedsaid) alignedtext
+end grestore
+end grestore
+
+%	node112
+gsave 10 dict begin
+8398 11355 39 18 ellipse_path
+stroke
+gsave 10 dict begin
+8398 11350 moveto 57 -0.5 (Andrew) alignedtext
+end grestore
+end grestore
+
+%	node113
+gsave 10 dict begin
+3750 7465 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+3750 7460 moveto 33 -0.5 (carol) alignedtext
+end grestore
+end grestore
+
+%	node115
+gsave 10 dict begin
+11833 5820 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+11833 5815 moveto 31 -0.5 (Meg) alignedtext
+end grestore
+end grestore
+
+%	node116 -> node122
+newpath 7348 6965 moveto
+7194 6965 7041 6966 6888 6966 curveto
+stroke
+gsave 10 dict begin
+7131 6972 moveto 109 -0.5 (daughter/father) alignedtext
+end grestore
+
+%	node116 -> node124
+newpath 7395 6983 moveto
+7301 7266 7206 7549 7112 7832 curveto
+stroke
+gsave 10 dict begin
+7277 7402 moveto 200 -0.5 (Innocent Stepson/Evil Stepdad) alignedtext
+end grestore
+
+%	node117 -> node122
+newpath 7528 7159 moveto
+7314 7097 7100 7035 6886 6973 curveto
+stroke
+gsave 10 dict begin
+7211 7074 moveto 188 -0.5 (AFPlittlesister/AFPbigsister) alignedtext
+end grestore
+
+%	node117 -> node125
+newpath 7550 7187 moveto
+7458 7322 7365 7457 7273 7592 curveto
+stroke
+gsave 10 dict begin
+7435 7384 moveto 117 -0.5 (Cuddlee/Cuddler) alignedtext
+end grestore
+
+%	node118
+gsave 10 dict begin
+4076 9810 37 18 ellipse_path
+stroke
+gsave 10 dict begin
+4076 9805 moveto 53 -0.5 (pies1980) alignedtext
+end grestore
+end grestore
+
+%	node119
+gsave 10 dict begin
+4396 1524 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+4396 1519 moveto 21 -0.5 (Iris) alignedtext
+end grestore
+end grestore
+
+%	node120
+gsave 10 dict begin
+6409 1867 31 18 ellipse_path
+stroke
+gsave 10 dict begin
+6409 1862 moveto 41 -0.5 (Torak) alignedtext
+end grestore
+end grestore
+
+%	node121
+gsave 10 dict begin
+10763 322 33 18 ellipse_path
+stroke
+gsave 10 dict begin
+10763 317 moveto 44 -0.5 (tigseth) alignedtext
+end grestore
+end grestore
+
+%	node122 -> node124
+newpath 6866 6984 moveto
+6943 7266 7024 7550 7101 7832 curveto
+stroke
+gsave 10 dict begin
+7007 7403 moveto 229 -0.5 (#afpNiceDad/#afpCuteDaughter) alignedtext
+end grestore
+
+%	node122 -> node125
+newpath 6872 6983 moveto
+6997 7185 7125 7390 7250 7592 curveto
+stroke
+gsave 10 dict begin
+7085 7283 moveto 205 -0.5 (AFPbigbrother/AFPlittlesister) alignedtext
+end grestore
+
+%	node122 -> node131
+newpath 6860 6984 moveto
+6837 7266 6816 7548 6793 7830 curveto
+stroke
+gsave 10 dict begin
+6850 7402 moveto 217 -0.5 (AFPsexyfriend/AFPsexyfriend) alignedtext
+end grestore
+
+%	node122 -> node136
+newpath 6854 6984 moveto
+6802 7112 6752 7241 6700 7369 curveto
+stroke
+gsave 10 dict begin
+6801 7171 moveto 161 -0.5 (AFPstalker/AFPstalkee) alignedtext
+end grestore
+
+%	node122 -> node136
+newpath 6854 6984 moveto
+6802 7112 6752 7241 6700 7369 curveto
+stroke
+gsave 10 dict begin
+6801 7171 moveto 165 -0.5 (AFPhiancee/AFPhiance) alignedtext
+end grestore
+
+%	node122 -> node154
+newpath 6848 6982 moveto
+6485 7422 6122 7861 5758 8302 curveto
+stroke
+gsave 10 dict begin
+6326 7637 moveto 183 -0.5 (provider of wisdom/disciple) alignedtext
+end grestore
+
+%	node123
+gsave 10 dict begin
+10240 7231 32 18 ellipse_path
+stroke
+gsave 10 dict begin
+10240 7226 moveto 43 -0.5 (adrian) alignedtext
+end grestore
+end grestore
+
+%	node124 -> node131
+newpath 7075 7850 moveto
+6990 7850 6904 7848 6819 7848 curveto
+stroke
+gsave 10 dict begin
+6949 7856 moveto 73 -0.5 (sister/sister) alignedtext
+end grestore
+
+%	node124 -> node155
+newpath 7125 7865 moveto
+7270 7980 7416 8095 7562 8210 curveto
+stroke
+gsave 10 dict begin
+7344 8045 moveto 537 -0.5 (AFPhiancee \(first week of February only\)/AFPhiance \(first week of February only\)) alignedtext
+end grestore
+
+%	node125 -> node155
+newpath 7270 7628 moveto
+7371 7821 7473 8015 7574 8208 curveto
+stroke
+gsave 10 dict begin
+7446 7913 moveto 165 -0.5 (AFPhiance/AFPhiancee) alignedtext
+end grestore
+
+%	node128
+gsave 10 dict begin
+12032 8974 37 18 ellipse_path
+stroke
+gsave 10 dict begin
+12032 8969 moveto 53 -0.5 (Therese) alignedtext
+end grestore
+end grestore
+
+%	node129
+gsave 10 dict begin
+9907 13681 36 18 ellipse_path
+stroke
+gsave 10 dict begin
+9907 13676 moveto 50 -0.5 (curious) alignedtext
+end grestore
+end grestore
+
+%	node132
+gsave 10 dict begin
+11022 2888 32 18 ellipse_path
+stroke
+gsave 10 dict begin
+11022 2883 moveto 42 -0.5 (flexor) alignedtext
+end grestore
+end grestore
+
+%	node133
+gsave 10 dict begin
+2270 1994 41 18 ellipse_path
+stroke
+gsave 10 dict begin
+2270 1989 moveto 60 -0.5 (gadfium) alignedtext
+end grestore
+end grestore
+
+%	node134
+gsave 10 dict begin
+7457 7673 27 18 ellipse_path
+stroke
+gsave 10 dict begin
+7457 7668 moveto 23 -0.5 (Jen) alignedtext
+end grestore
+end grestore
+
+%	node134 -> node137
+newpath 7461 7655 moveto
+7486 7550 7509 7445 7534 7340 curveto
+stroke
+gsave 10 dict begin
+7521 7492 moveto 100 -0.5 (AFPsis/AFPsis) alignedtext
+end grestore
+
+%	node135
+gsave 10 dict begin
+10475 10013 34 18 ellipse_path
+stroke
+gsave 10 dict begin
+10475 10008 moveto 47 -0.5 (Gilllyh) alignedtext
+end grestore
+end grestore
+
+%	node137 -> node144
+newpath 7545 7304 moveto
+7588 7198 7629 7090 7672 6984 curveto
+stroke
+gsave 10 dict begin
+7632 7139 moveto 155 -0.5 (AFPDarcy/AFOLizzie) alignedtext
+end grestore
+
+%	node138
+gsave 10 dict begin
+11853 4593 30 18 ellipse_path
+stroke
+gsave 10 dict begin
+11853 4588 moveto 38 -0.5 (harsh) alignedtext
+end grestore
+end grestore
+
+%	node139 -> node150
+newpath 9474 5352 moveto
+9504 6156 9536 6960 9566 7764 curveto
+stroke
+gsave 10 dict begin
+9544 6553 moveto 202 -0.5 (pestering boss/editor/secretary) alignedtext
+end grestore
+
+%	node140
+gsave 10 dict begin
+7361 180 42 18 ellipse_path
+stroke
+gsave 10 dict begin
+7361 175 moveto 63 -0.5 (Ladylark) alignedtext
+end grestore
+end grestore
+
+%	node141
+gsave 10 dict begin
+2246 7123 28 18 ellipse_path
+stroke
+gsave 10 dict begin
+2246 7118 moveto 34 -0.5 (jleith) alignedtext
+end grestore
+end grestore
+
+%	node169
+gsave 10 dict begin
+7075 10703 37 18 ellipse_path
+stroke
+gsave 10 dict begin
+7075 10698 moveto 53 -0.5 (DianeL.) alignedtext
+end grestore
+end grestore
+
+%	node143 -> node169
+newpath 7836 9880 moveto
+7588 10149 7338 10418 7090 10687 curveto
+stroke
+gsave 10 dict begin
+7488 10277 moveto 118 -0.5 (Princess/Sidekick) alignedtext
+end grestore
+
+%	node145
+gsave 10 dict begin
+7498 3197 37 18 ellipse_path
+stroke
+gsave 10 dict begin
+7498 3192 moveto 53 -0.5 (Giorgos) alignedtext
+end grestore
+end grestore
+
+%	node148
+gsave 10 dict begin
+13981 11220 42 18 ellipse_path
+stroke
+gsave 10 dict begin
+13981 11215 moveto 63 -0.5 (mordicus) alignedtext
+end grestore
+end grestore
+
+%	node151
+gsave 10 dict begin
+6211 3442 39 18 ellipse_path
+stroke
+gsave 10 dict begin
+6211 3437 moveto 57 -0.5 (Sherilyn) alignedtext
+end grestore
+end grestore
+
+%	node153
+gsave 10 dict begin
+2868 8838 58 18 ellipse_path
+stroke
+gsave 10 dict begin
+2868 8833 moveto 94 -0.5 (Rande Knight) alignedtext
+end grestore
+end grestore
+
+%	node154 -> node155
+newpath 5787 8317 moveto
+6371 8288 6955 8258 7539 8228 curveto
+stroke
+gsave 10 dict begin
+6663 8279 moveto 136 -0.5 (rinkka/kaunis henki) alignedtext
+end grestore
+
+%	node155 -> node166
+newpath 7572 8208 moveto
+7391 7913 7206 7618 7025 7323 curveto
+stroke
+gsave 10 dict begin
+7322 7760 moveto 136 -0.5 (afpartner/afpartner) alignedtext
+end grestore
+
+%	node156
+gsave 10 dict begin
+5608 11145 62 18 ellipse_path
+stroke
+gsave 10 dict begin
+5608 11140 moveto 102 -0.5 (Joaquim Soares) alignedtext
+end grestore
+end grestore
+
+%	node157
+gsave 10 dict begin
+5070 4259 56 18 ellipse_path
+stroke
+gsave 10 dict begin
+5070 4254 moveto 91 -0.5 (Steve Megson) alignedtext
+end grestore
+end grestore
+
+%	node158
+gsave 10 dict begin
+2133 3871 51 18 ellipse_path
+stroke
+gsave 10 dict begin
+2133 3866 moveto 81 -0.5 (Random_C) alignedtext
+end grestore
+end grestore
+
+%	node159
+gsave 10 dict begin
+6987 12130 93 18 ellipse_path
+stroke
+gsave 10 dict begin
+6987 12125 moveto 165 -0.5 (Sniffnoy \(the Swordfish\)) alignedtext
+end grestore
+end grestore
+
+%	node160
+gsave 10 dict begin
+13996 13494 35 18 ellipse_path
+stroke
+gsave 10 dict begin
+13996 13489 moveto 49 -0.5 (phobos) alignedtext
+end grestore
+end grestore
+
+%	node161
+gsave 10 dict begin
+8140 4787 39 18 ellipse_path
+stroke
+gsave 10 dict begin
+8140 4782 moveto 57 -0.5 (Afphrid) alignedtext
+end grestore
+end grestore
+
+%	node162
+gsave 10 dict begin
+75 10504 65 18 ellipse_path
+stroke
+gsave 10 dict begin
+75 10499 moveto 109 -0.5 (Senior Wrangler) alignedtext
+end grestore
+end grestore
+
+%	node163
+gsave 10 dict begin
+14251 385 49 18 ellipse_path
+stroke
+gsave 10 dict begin
+14251 380 moveto 77 -0.5 (Korenwolf) alignedtext
+end grestore
+end grestore
+
+%	node164
+gsave 10 dict begin
+8247 2039 28 18 ellipse_path
+stroke
+gsave 10 dict begin
+8247 2034 moveto 34 -0.5 (Kegs) alignedtext
+end grestore
+end grestore
+
+%	node165
+gsave 10 dict begin
+957 8818 64 18 ellipse_path
+stroke
+gsave 10 dict begin
+957 8813 moveto 106 -0.5 (The Rumpo Kid) alignedtext
+end grestore
+end grestore
+
+%	node168
+gsave 10 dict begin
+12534 3496 28 18 ellipse_path
+stroke
+gsave 10 dict begin
+12534 3491 moveto 34 -0.5 (kylet) alignedtext
+end grestore
+end grestore
+
+%	node170
+gsave 10 dict begin
+5175 5385 29 18 ellipse_path
+stroke
+gsave 10 dict begin
+5175 5380 moveto 36 -0.5 (Tessa) alignedtext
+end grestore
+end grestore
+endpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+end
+restore
+%%EOF

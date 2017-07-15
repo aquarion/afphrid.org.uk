@@ -1,0 +1,68 @@
++-------------------+
+| Tables_in_afphrid |
++-------------------+
+| clique            |
+| cliquelink        |
+| message           |
+| person            |
+| relationship      |
++-------------------+
+
+mysql> describe clique;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| id          | int(11)      |      | PRI | NULL    | auto_increment |
+| name        | varchar(255) |      |     |         |                |
+| owner       | tinytext     | YES  |     | NULL    |                |
+| status      | int(11)      |      |     | 0       |                |
+| description | tinytext     |      |     |         |                |
++-------------+--------------+------+-----+---------+----------------+
+
+mysql> describe cliquelink;
++----------+----------+------+-----+---------+----------------+
+| Field    | Type     | Null | Key | Default | Extra          |
++----------+----------+------+-----+---------+----------------+
+| id       | int(11)  |      | PRI | NULL    | auto_increment |
+| name     | tinytext |      |     |         |                |
+| clique   | tinytext |      |     |         |                |
+| position | tinytext |      |     |         |                |
++----------+----------+------+-----+---------+----------------+
+
+mysql> describe message;
++----------+------------------+------+-----+---------+----------------+
+| Field    | Type             | Null | Key | Default | Extra          |
++----------+------------------+------+-----+---------+----------------+
+| id       | int(10) unsigned |      | PRI | NULL    | auto_increment |
+| msgto    | tinytext         | YES  |     | NULL    |                |
+| msgfrom  | tinytext         | YES  |     | NULL    |                |
+| content  | mediumtext       | YES  |     | NULL    |                |
+| datesent | timestamp(10)    | YES  |     | NULL    |                |
+| dateread | timestamp(10)    | YES  |     | NULL    |                |
+| type     | tinytext         | YES  |     | NULL    |                |
++----------+------------------+------+-----+---------+----------------+
+
+mysql> describe person;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| name       | varchar(255) |      |     |         |                |
+| email      | tinytext     | YES  |     | NULL    |                |
+| homepage   | tinytext     | YES  |     | NULL    |                |
+| password   | tinytext     | YES  |     | NULL    |                |
+| registered | date         | YES  |     | NULL    |                |
+| prefs      | tinytext     | YES  |     | NULL    |                |
+| id         | int(11)      |      | PRI | NULL    | auto_increment |
++------------+--------------+------+-----+---------+----------------+
+
+mysql> describe relationship;
++------------+----------+------+-----+---------+----------------+
+| Field      | Type     | Null | Key | Default | Extra          |
++------------+----------+------+-----+---------+----------------+
+| id         | int(11)  |      | PRI | NULL    | auto_increment |
+| person_one | tinytext |      |     |         |                |
+| person_two | tinytext |      |     |         |                |
+| rel_onetwo | tinytext |      |     |         |                |
+| rel_twoone | tinytext |      |     |         |                |
+| status     | int(11)  | YES  |     | NULL    |                |
++------------+----------+------+-----+---------+----------------+
